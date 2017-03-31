@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: A note on giving back
 date: '2017-02-28T12:24:00.002+11:00'
 author: Zarah Dominguez
