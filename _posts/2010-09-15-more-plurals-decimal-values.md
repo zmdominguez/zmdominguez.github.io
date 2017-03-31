@@ -76,6 +76,6 @@ private Float convertProgress(int progress){
 
 So you see, it's quite long-winded. Here are some screen shots of the results:
 
-![](http://4.bp.blogspot.com/_p3DeelS9Gp8/TJBWSMg5XkI/AAAAAAAAA28/JHLcPbv0wQQ/s320/plurals_decimal_less1.png) ![](http://2.bp.blogspot.com/_p3DeelS9Gp8/TJBWR4FQZjI/AAAAAAAAA20/LWlDCWAVfEk/s320/plurals_decimal_1.png) [![](http://2.bp.blogspot.com/_p3DeelS9Gp8/TJBWSZX6GaI/AAAAAAAAA3E/prxdkDjhaEk/s320/plurals_decimal_more1.png)](http://2.bp.blogspot.com/_p3DeelS9Gp8/TJBWSZX6GaI/AAAAAAAAA3E/prxdkDjhaEk/s1600/plurals_decimal_more1.png)
+![](http://4.bp.blogspot.com/_p3DeelS9Gp8/TJBWSMg5XkI/AAAAAAAAA28/JHLcPbv0wQQ/s320/plurals_decimal_less1.png) ![](http://2.bp.blogspot.com/_p3DeelS9Gp8/TJBWR4FQZjI/AAAAAAAAA20/LWlDCWAVfEk/s320/plurals_decimal_1.png) ![](http://2.bp.blogspot.com/_p3DeelS9Gp8/TJBWSZX6GaI/AAAAAAAAA3E/prxdkDjhaEk/s320/plurals_decimal_more1.png)![](http://2.bp.blogspot.com/_p3DeelS9Gp8/TJBWSZX6GaI/AAAAAAAAA3E/prxdkDjhaEk/s1600/plurals_decimal_more1.png)
 
 Different values for the unit value
