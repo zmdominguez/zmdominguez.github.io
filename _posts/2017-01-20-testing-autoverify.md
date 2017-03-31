@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Troubleshooting autoVerify
 date: '2017-01-20T21:30:00.002+11:00'
 author: Zarah Dominguez
