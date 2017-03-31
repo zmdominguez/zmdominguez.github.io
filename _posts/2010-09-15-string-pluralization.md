@@ -55,4 +55,4 @@ CharSequence quantityMore = getResources().getQuantityText(R.plurals.pluralsTest
 
 I created a basic layout with `TextView`s to display what each of these strings look like. Take note though that `getQuantityText()` returns a `CharSequence` and not a `String`! Also, from what I have noticed, and as the name mildly suggests, `getQuantityText()` gets the actual value of the text you defined in your xml.
 
-<div style="text-align: center;">![](http://2.bp.blogspot.com/_p3DeelS9Gp8/TJDhPBxbZ2I/AAAAAAAAA3M/Zm10eyqlAtQ/s320/plurals.png)![](http://2.bp.blogspot.com/_p3DeelS9Gp8/TJDhPBxbZ2I/AAAAAAAAA3M/Zm10eyqlAtQ/s1600/plurals.png)</div>
+![](http://2.bp.blogspot.com/_p3DeelS9Gp8/TJDhPBxbZ2I/AAAAAAAAA3M/Zm10eyqlAtQ/s320/plurals.png)![](http://2.bp.blogspot.com/_p3DeelS9Gp8/TJDhPBxbZ2I/AAAAAAAAA3M/Zm10eyqlAtQ/s1600/plurals.png)
