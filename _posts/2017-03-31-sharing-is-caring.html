@@ -13,4 +13,51 @@ blogger_id: tag:blogger.com,1999:blog-8588450866181483028.post-91680710531305275
 blogger_orig_url: http://www.zdominguez.com/2017/03/sharing-is-caring.html
 ---
 
-Or so they say.<br /><br />Luckily for us, Android makes it <a href="https://developer.android.com/training/sharing/send.html">super easy to share things</a> between apps. It even provides a pretty-looking Intent chooser*!<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="https://2.bp.blogspot.com/-gktN948vHGc/WN4kQwfKPSI/AAAAAAABBcU/HWyPcR5RSVM81c3BVW7yVamvnJkMbdB7QCLcB/s1600/device-2017-03-31-203350.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="320" src="https://2.bp.blogspot.com/-gktN948vHGc/WN4kQwfKPSI/AAAAAAABBcU/HWyPcR5RSVM81c3BVW7yVamvnJkMbdB7QCLcB/s320/device-2017-03-31-203350.png" width="180" /></a></div><br />We can get this nifty bottom sheet with only a few lines of code:<br /><pre class="brush:java">// Construct the intent we want to send<br />final Intent shareIntent = new Intent(Intent.ACTION_SEND);<br />shareIntent.setAction(Intent.ACTION_SEND);<br />shareIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");<br />shareIntent.setType("text/plain");<br /><br />// Ask Android to create the chooser for us<br />final Intent chooser = Intent.createChooser(shareIntent, getString(R.string.share_text));<br />startActivity(chooser);<br /></pre><br />That's it, your work is done.<br /><br />But what if we want the users to choose our own app? For example, we have a Share via Domain activity in our app that we prefer our users to use when sharing properties. It generates an email you can send to your friends and includes some information about the property. However, we still want to give users the option to share via other channels.<br /><br />Luckily for us (we Android devs are <i>really</i>&nbsp;lucky, in case you haven't noticed), there is an API that allows us to do just that.<br /><br />We can add extras (via <a href="https://developer.android.com/reference/android/content/Intent.html#EXTRA_INITIAL_INTENTS"><span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">EXTRA_INITIAL_INTENTS</span></a>) to the&nbsp;<span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">chooser Intent</span> that will tell the OS to prioritise the <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">Intent</span>s we want. In my <a href="https://github.com/zmdominguez/sdk_sandbox/pull/7">sandbox app</a>, I made a simple activity that will display the text we send in <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">shareIntent</span> above.<br /><br /><pre class="brush:java">Intent customSharer = new Intent(this, CustomShareActivity.class);<br />Intent[] initialIntents = new Intent[] {customSharer};<br />chooser.putExtra(Intent.EXTRA_INITIAL_INTENTS, initialIntents);<br /></pre><br />This will surface our priority intents at the very top of the list. It will appear with app icon, with the value we have in <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">label</span> from the <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">Manifest</span>.<br /><br /><pre class="brush:xml">&lt;activity android:name=".bottomsheet.CustomShareActivity"<br />          android:label="Choose Me!"/&gt;<br /></pre>We end up with something like this:<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/--tVSXIVUS1Y/WN4u5Xvf_rI/AAAAAAABBcw/d_aA31CJf8MwuJhlAZ7v614wbvK3F5o1ACLcB/s1600/device-2017-03-31-212608.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="320" src="https://1.bp.blogspot.com/--tVSXIVUS1Y/WN4u5Xvf_rI/AAAAAAABBcw/d_aA31CJf8MwuJhlAZ7v614wbvK3F5o1ACLcB/s320/device-2017-03-31-212608.png" width="180" /></a></div><div class="separator" style="clear: both; text-align: center;"></div><br />Pretty cool, huh?<br /><br /><br />*I know, the developer docs screenshots are a tad outdated.&nbsp;<span style="background-color: white; color: #545454; font-family: &quot;arial&quot; , sans-serif; font-size: x-small;">¯\_(ツ)_/¯</span>
+Or so they say.
+
+Luckily for us, Android makes it [super easy to share things](https://developer.android.com/training/sharing/send.html) between apps. It even provides a pretty-looking Intent chooser*!
+
+<div class="separator" style="clear: both; text-align: center;">[![](https://2.bp.blogspot.com/-gktN948vHGc/WN4kQwfKPSI/AAAAAAABBcU/HWyPcR5RSVM81c3BVW7yVamvnJkMbdB7QCLcB/s320/device-2017-03-31-203350.png)](https://2.bp.blogspot.com/-gktN948vHGc/WN4kQwfKPSI/AAAAAAABBcU/HWyPcR5RSVM81c3BVW7yVamvnJkMbdB7QCLcB/s1600/device-2017-03-31-203350.png)</div>
+
+We can get this nifty bottom sheet with only a few lines of code:
+
+```java
+// Construct the intent we want to send
+final Intent shareIntent = new Intent(Intent.ACTION_SEND);
+shareIntent.setAction(Intent.ACTION_SEND);
+shareIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+shareIntent.setType("text/plain");
+
+// Ask Android to create the chooser for us
+final Intent chooser = Intent.createChooser(shareIntent, getString(R.string.share_text));
+startActivity(chooser);
+```
+
+That's it, your work is done.
+
+But what if we want the users to choose our own app? For example, we have a Share via Domain activity in our app that we prefer our users to use when sharing properties. It generates an email you can send to your friends and includes some information about the property. However, we still want to give users the option to share via other channels.
+
+Luckily for us (we Android devs are _really_ lucky, in case you haven't noticed), there is an API that allows us to do just that.
+
+We can add extras (via [<span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">EXTRA_INITIAL_INTENTS</span>](https://developer.android.com/reference/android/content/Intent.html#EXTRA_INITIAL_INTENTS)) to the <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">chooser Intent</span> that will tell the OS to prioritise the <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">Intent</span>s we want. In my [sandbox app](https://github.com/zmdominguez/sdk_sandbox/pull/7), I made a simple activity that will display the text we send in <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">shareIntent</span> above.
+
+```java
+Intent customSharer = new Intent(this, CustomShareActivity.class);
+Intent[] initialIntents = new Intent[] {customSharer};
+chooser.putExtra(Intent.EXTRA_INITIAL_INTENTS, initialIntents);
+```
+
+This will surface our priority intents at the very top of the list. It will appear with app icon, with the value we have in <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">label</span> from the <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace; font-size: small;">Manifest</span>.
+
+```xml
+<activity android:name=".bottomsheet.CustomShareActivity"
+          android:label="Choose Me!"/>
+```
+
+We end up with something like this:
+
+<div class="separator" style="clear: both; text-align: center;">[![](https://1.bp.blogspot.com/--tVSXIVUS1Y/WN4u5Xvf_rI/AAAAAAABBcw/d_aA31CJf8MwuJhlAZ7v614wbvK3F5o1ACLcB/s320/device-2017-03-31-212608.png)](https://1.bp.blogspot.com/--tVSXIVUS1Y/WN4u5Xvf_rI/AAAAAAABBcw/d_aA31CJf8MwuJhlAZ7v614wbvK3F5o1ACLcB/s1600/device-2017-03-31-212608.png)</div>
+
+Pretty cool, huh?
+
+*I know, the developer docs screenshots are a tad outdated. <span style="background-color: white; color: #545454; font-family: &quot;arial&quot; , sans-serif; font-size: x-small;">¯\_(ツ)_/¯</span>
