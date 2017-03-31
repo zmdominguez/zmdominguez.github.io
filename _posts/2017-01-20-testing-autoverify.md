@@ -59,8 +59,7 @@ I IntentFilterIntentSvc: Verification 6 complete. Success:false. Failed hosts:m.
 
 In this case one host (`https://m.domain.com.au`) fails, which means automatic link handling will not work at all. If this happens, hit up your friendly web developers and go through the troubleshooting steps outlined in the developer guide.
 
-Once successful, the last tine in the verification process should say 
-  Success:true</span>:
+Once successful, the last tine in the verification process should say `Success:true`:
 
 ```shell
   I IntentFilterIntentSvc: Verification 7 complete. Success:true. Failed hosts:.
