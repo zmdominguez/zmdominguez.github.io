@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Sharing is Caring
 date: '2017-03-31T21:08:00.002+11:00'
 author: Zarah Dominguez
