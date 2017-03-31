@@ -61,4 +61,4 @@ We end up with something like this:
 
 Pretty cool, huh?
 
-*I know, the developer docs screenshots are a tad outdated. <span style="background-color: white; color: #545454; font-family: &quot;arial&quot; , sans-serif; font-size: x-small;">¯\_(ツ)_/¯</span>
+*I know, the developer docs screenshots are a tad outdated. ¯\_(ツ)_/¯
