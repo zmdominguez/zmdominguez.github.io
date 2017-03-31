@@ -13,8 +13,8 @@ blogger_orig_url: http://www.zdominguez.com/2017/02/a-note-on-giving-back.html
 
 Recently, there has been a spate of tweets about developers admitting their weaknesses. A bunch of people I know even made into the [Moment](https://twitter.com/i/moments/836232961037058050) created by [@ThePracticalDev](https://twitter.com/ThePracticalDev). And then there's this tweet:
 
-> <div dir="ltr" lang="en">Hi, I’m aurynn, and even though I’ve been coding for 15 years, as a woman in tech anything less than a display of perfection is a risk [https://t.co/DMYMPTQh1R](https://t.co/DMYMPTQh1R)</div>
-> 
+> Hi, I’m aurynn, and even though I’ve been coding for 15 years, as a woman in tech anything less than a display of perfection > is a risk [https://t.co/DMYMPTQh1R](https://t.co/DMYMPTQh1R)
+>
 > — your pocket friend (@aurynn) [February 26, 2017](https://twitter.com/aurynn/status/835961004022345728)
 
 Go ahead and read that whole thread. It's important.
