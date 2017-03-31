@@ -1,0 +1,14 @@
+---
+layout: post
+title: MongoDB and Authentication
+date: '2011-12-20T13:49:00.000+11:00'
+author: Zarah Dominguez
+tags:
+- authentication
+- mongodb
+modified_time: '2012-02-13T14:37:59.609+11:00'
+blogger_id: tag:blogger.com,1999:blog-8588450866181483028.post-1482053482459432531
+blogger_orig_url: http://www.zdominguez.com/2011/12/mongodb-and-authentication.html
+---
+
+By default, MongoDB allows access to the database without authentication. Adding a user with a username/password is easy, but authenticating might be a bit tricky since the <a href="http://www.mongodb.org/display/DOCS/Security+and+Authentication">official documentation</a> does not say the command directly. <br />First, we add an admin account. Navigate to the MongoDB directory on your machine then start the database. <br /><pre class="brush:java">$ ./mongo<br />&gt; use admin<br />&gt; db.addUser(adminuser, adminpassword)</pre>Switch to the database of your choice and add users to it. <br /><pre class="brush:java">&gt; use foo<br />&gt; db.addUser(myuser, userpassword)</pre>This adds a user <code>myuser</code> that has read and write access to the database. If we want a user with read-only access, set the third parameter for <code>addUser()</code>. <br /><pre class="brush:java">&gt; db.addUser(guest, guestpassword, true)</pre>You can check for users with access to a particular database like thus:<br /><pre class="brush:bash">&gt; db.system.users.find().pretty()<br />{<br />        "_id" : ObjectId("4ee9863d954eb7168e07089d"),<br />        "user" : "zarah",<br />        "readOnly" : false,<br />        "pwd" : "70581bfb1e32e2286df11fe119addc7a"<br />}<br />{<br />        "_id" : ObjectId("4ee98658954eb7168e07089e"),<br />        "user" : "guest",<br />        "readOnly" : true,<br />        "pwd" : "88558f1ece63fa0b528012b9840bd9de"<br />}</pre><br />Now stop the MongoDB server and restart it with authentication enabled. <br /><pre class="brush:java">$ ./mongod --auth<br />&gt; mongo foo -u myuser -p userpassword</pre>where <code>foo</code> is the database that <code>myuser</code> has access to. <br />You can now read and write into database <code>foo</code>. Notice however that querying for databases would result to an error:<br /><pre class="brush:java">&gt; show dbs<br />Mon Dec 19 17:21:20 uncaught exception: listDatabases failed:{ "errmsg" : "need to login", "ok" : 0 }</pre><br />Exit MongoDB and login again, this time using the read-only account. If we try inserting a document, an error should appear:<br /><pre class="brush:bash">&gt; db.foo.insert({"title","MongoDB Authentication Test"})<br />unauthorized</pre>The read-only account can query for collections and use <code>find()</code> and its variations. It can't, however, query for databases.

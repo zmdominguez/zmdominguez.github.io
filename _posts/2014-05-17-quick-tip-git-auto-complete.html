@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Quick Tip: git Auto-complete'
+date: '2014-05-17T04:22:00.000+10:00'
+author: Zarah Dominguez
+tags:
+- git
+modified_time: '2014-05-17T04:22:04.941+10:00'
+blogger_id: tag:blogger.com,1999:blog-8588450866181483028.post-2292886583832184790
+blogger_orig_url: http://www.zdominguez.com/2014/05/quick-tip-git-auto-complete.html
+---
+
+When I started using git, it peeved me that there is no auto-complete. More so when you have to manually do a <code>git add</code> manually.<br /><br />Thank heavens I found this little gem. Making auto-complete work for git:<br /><br />In terminal:<br /><pre class="brush:shell">curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash</pre><br /><br />And then you'd need to "activate" it in your .bash_profile:<br /><pre class="brush:shell">if [ -f ~/.git-completion.bash ]; then<br />  . ~/.git-completion.bash<br />fi</pre>
