@@ -14,7 +14,7 @@ excerpt_separator: <!--more-->
 ---
 
 The last developer preview of Android 7.1 [has started shipping](http://android-developers.blogspot.com.au/2016/11/final-update-to-android-7-1-developer-preview.html), which means APIs are (based on past experience) more or less stable. There is a [very good write up](https://developer.android.com/preview/api-overview.html) on developer.android.com on how to get started with supporting these new features. I set about trying it out, and here's what happened.
-
+<!--more-->
 ### Update SDK version
 
 Let's start with the (supposedly) easy bit -- updating target SDK to 25\. It should be as easy as updating your `build.gradle` file, but just like when the API 24 sources became available, I found that I have to edit the SDK path before Studio starts to recognise the new APIs.
