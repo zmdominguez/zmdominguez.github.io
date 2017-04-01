@@ -11,6 +11,7 @@ modified_time: '2017-03-31T21:28:58.617+11:00'
 thumbnail: https://2.bp.blogspot.com/-gktN948vHGc/WN4kQwfKPSI/AAAAAAABBcU/HWyPcR5RSVM81c3BVW7yVamvnJkMbdB7QCLcB/s72-c/device-2017-03-31-203350.png
 blogger_id: tag:blogger.com,1999:blog-8588450866181483028.post-9168071053130527543
 blogger_orig_url: http://www.zdominguez.com/2017/03/sharing-is-caring.html
+comments: true
 ---
 
 Or so they say.
