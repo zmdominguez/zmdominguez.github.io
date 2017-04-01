@@ -17,7 +17,7 @@ Or so they say.
 
 Luckily for us, Android makes it [super easy to share things](https://developer.android.com/training/sharing/send.html) between apps. It even provides a pretty-looking Intent chooser*!
 
-[![](https://2.bp.blogspot.com/-gktN948vHGc/WN4kQwfKPSI/AAAAAAABBcU/HWyPcR5RSVM81c3BVW7yVamvnJkMbdB7QCLcB/s320/device-2017-03-31-203350.png)](https://2.bp.blogspot.com/-gktN948vHGc/WN4kQwfKPSI/AAAAAAABBcU/HWyPcR5RSVM81c3BVW7yVamvnJkMbdB7QCLcB/s1600/device-2017-03-31-203350.png)
+<p style="text-align: center"><img src="https://2.bp.blogspot.com/-gktN948vHGc/WN4kQwfKPSI/AAAAAAABBcU/HWyPcR5RSVM81c3BVW7yVamvnJkMbdB7QCLcB/s640/device-2017-03-31-203350.png"></p>
 
 We can get this nifty bottom sheet with only a few lines of code:
 
@@ -56,7 +56,7 @@ This will surface our priority intents at the very top of the list. It will appe
 
 We end up with something like this:
 
-[![](https://1.bp.blogspot.com/--tVSXIVUS1Y/WN4u5Xvf_rI/AAAAAAABBcw/d_aA31CJf8MwuJhlAZ7v614wbvK3F5o1ACLcB/s320/device-2017-03-31-212608.png)](https://1.bp.blogspot.com/--tVSXIVUS1Y/WN4u5Xvf_rI/AAAAAAABBcw/d_aA31CJf8MwuJhlAZ7v614wbvK3F5o1ACLcB/s1600/device-2017-03-31-212608.png)
+<p style="text-align: center"><img src="https://1.bp.blogspot.com/--tVSXIVUS1Y/WN4u5Xvf_rI/AAAAAAABBcw/d_aA31CJf8MwuJhlAZ7v614wbvK3F5o1ACLcB/s640/device-2017-03-31-212608.png"></p>
 
 Pretty cool, huh?
 

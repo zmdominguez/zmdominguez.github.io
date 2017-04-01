@@ -31,12 +31,12 @@ I am not alone.
 
 There are people who will feed on your fears. I made a post about a new discovery three days ago. And true enough, I got replies like this:
 
-[![](https://1.bp.blogspot.com/-KdLz4-fJc5o/WLTQzqSzVaI/AAAAAAAA8lo/YnuDElbK1lgNp6pi6jPN7ak6TIiUEt8MgCLcB/s320/Screen%2BShot%2B2017-02-28%2Bat%2B12.20.55.png)](https://1.bp.blogspot.com/-KdLz4-fJc5o/WLTQzqSzVaI/AAAAAAAA8lo/YnuDElbK1lgNp6pi6jPN7ak6TIiUEt8MgCLcB/s1600/Screen%2BShot%2B2017-02-28%2Bat%2B12.20.55.png)
+<p style="text-align: center"><img src="https://1.bp.blogspot.com/-KdLz4-fJc5o/WLTQzqSzVaI/AAAAAAAA8lo/YnuDElbK1lgNp6pi6jPN7ak6TIiUEt8MgCLcB/s640/Screen%2BShot%2B2017-02-28%2Bat%2B12.20.55.png"></p>
 
 Uhmmm... Okay... I'm sorry for making you see something you already know. I'll be more careful next time.
 
 But then a few hours ago, someone left this comment in one of my posts:
 
-[![](https://3.bp.blogspot.com/-YyarzRcsMHs/WLTOKtudkcI/AAAAAAAA8lY/x0lrdE61uWci7xoQ6GQsw4ISNur63ZSSQCLcB/s320/Screen%2BShot%2B2017-02-28%2Bat%2B11.52.25.png)](https://3.bp.blogspot.com/-YyarzRcsMHs/WLTOKtudkcI/AAAAAAAA8lY/x0lrdE61uWci7xoQ6GQsw4ISNur63ZSSQCLcB/s1600/Screen%2BShot%2B2017-02-28%2Bat%2B11.52.25.png)
+<p style="text-align: center"><img src="https://3.bp.blogspot.com/-YyarzRcsMHs/WLTOKtudkcI/AAAAAAAA8lY/x0lrdE61uWci7xoQ6GQsw4ISNur63ZSSQCLcB/s640/Screen%2BShot%2B2017-02-28%2Bat%2B11.52.25.png"></p>
 
 And this, my friends, is why despite all our fears, we should never stop sharing.
