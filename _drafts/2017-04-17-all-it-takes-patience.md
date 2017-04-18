@@ -56,4 +56,6 @@ And I think this is something that we should all remember. Most of the time we s
 
 Ask for help. Ask someone to look at your slides and give feedback, ask your local meetup group if you can do a practise run with them before your talk, ask a person who is in your target audience to listen to you practise, ask for a second opinion.
 
+PS: I think this talk is worth giving one or two more times, so please let me know if you want me give it at your event! :)
+
 <span style="font-size: small;">Thanks to Nick Butcher for letting me mangle his code and for early feedback on my drafts, Yigit Boyar for being patient with my stupid questions, Hugo Visser for the late night code reviews, and Francois Blavoet and Frederic Barthelery for reading through the drafts of my preso.</span>
