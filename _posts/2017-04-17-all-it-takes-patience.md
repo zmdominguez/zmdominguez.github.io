@@ -35,6 +35,8 @@ I then spent another ~20 hours writing and re-writing and fixing up the formatti
 <blockquote class="twitter-tweet" data-lang="en" data-width="400" align="center"><p lang="en" dir="ltr">Formatting code in Google Slides is so easy; there really is no excuse not to do it. I even made a gif! <a href="https://t.co/1iLZpfQxwA">pic.twitter.com/1iLZpfQxwA</a></p>&mdash; Zarah Dominguez 🦉 (@zarahjutz) <a href="https://twitter.com/zarahjutz/status/706755844965150720">March 7, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+Edit: Or you can use Roman Nurik's cool [code highlighter for slides](https://romannurik.github.io/SlidesCodeHighlighter/)
+
 I use speaker notes a lot when drafting my presentation. They are not word-for-word scripts of what I want to say though, but they do help me remember the point I was trying to make and is a good coach during practice runs.
 
 ## Talk
@@ -57,5 +59,7 @@ And I think this is something that we should all remember. Most of the time we s
 Ask for help. Ask someone to look at your slides and give feedback, ask your local meetup group if you can do a practise run with them before your talk, ask a person who is in your target audience to listen to you practise, ask for a second opinion.
 
 PS: I think this talk is worth giving one or two more times, so please let me know if you want me give it at your event! :)
+
+PPS: I would like to reiterate that this is _my_ process -- it may or may not work for you as everyone has their own style. :)
 
 <span style="font-size: small;">Thanks to Nick Butcher for letting me mangle his code and for early feedback on my drafts, Yigit Boyar for being patient with my stupid questions, Hugo Visser for the late night code reviews, Michael Evans for listening to all my whining, and Francois Blavoet and Frederic Barthelery for reading through the drafts of my preso.</span>
