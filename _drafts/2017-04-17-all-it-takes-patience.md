@@ -58,4 +58,4 @@ Ask for help. Ask someone to look at your slides and give feedback, ask your loc
 
 PS: I think this talk is worth giving one or two more times, so please let me know if you want me give it at your event! :)
 
-<span style="font-size: small;">Thanks to Nick Butcher for letting me mangle his code and for early feedback on my drafts, Yigit Boyar for being patient with my stupid questions, Hugo Visser for the late night code reviews, and Francois Blavoet and Frederic Barthelery for reading through the drafts of my preso.</span>
+<span style="font-size: small;">Thanks to Nick Butcher for letting me mangle his code and for early feedback on my drafts, Yigit Boyar for being patient with my stupid questions, Hugo Visser for the late night code reviews, Michael Evans for listening to all my whining, and Francois Blavoet and Frederic Barthelery for reading through the drafts of my preso.</span>
