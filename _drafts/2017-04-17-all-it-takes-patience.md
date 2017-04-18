@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "All It Takes Is Patience"
+title: "All You Need is Just a Little Patience"
 tags:
 - speaking
 - conference
@@ -27,11 +27,15 @@ I spent a whole bunch of time writing code for this talk. And by whole bunch I m
 
 I started up a Google Slides draft right as I started working on the code. That helped me come up with an outline organically. At this point, the slides all consist of short titles that would probably make sense only to me, and links to PRs that I create against my repo. If there is a particularly interesting thing I run across, I note it in the slide too.
 
-<a href="url"><img src="{{ site.baseurl }}/assets/slides_draft.png" align="center" height="360" ></a>
+<p style="text-align: center"><a href="Slide Draft"><img src="{{ site.baseurl }}/assets/slides_draft.png" height="360" ></a></p>
 
 And then of course, there's the inevitable three days I spent looking for a suitable presentation theme. I use [Slide Carnival](http://www.slidescarnival.com/), and it took a lot of false starts before I finally settled on [Viola](http://www.slidescarnival.com/viola-free-presentation-template/414). 
 
-I then spent another ~20 hours writing and re-writing and fixing up the formatting. I use speaker notes a lot when drafting my presentation. They are not word-for-word scripts of what I want to say though, but they do help me remember the point I was trying to make and is a good coach during practice runs.
+I then spent another ~20 hours writing and re-writing and fixing up the formatting. I make sure I format the code on my slides nice and pretty. Here's a recipe for you:
+<blockquote class="twitter-tweet" data-lang="en" data-width="400" align="center"><p lang="en" dir="ltr">Formatting code in Google Slides is so easy; there really is no excuse not to do it. I even made a gif! <a href="https://t.co/1iLZpfQxwA">pic.twitter.com/1iLZpfQxwA</a></p>&mdash; Zarah Dominguez 🦉 (@zarahjutz) <a href="https://twitter.com/zarahjutz/status/706755844965150720">March 7, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+I use speaker notes a lot when drafting my presentation. They are not word-for-word scripts of what I want to say though, but they do help me remember the point I was trying to make and is a good coach during practice runs.
 
 ## Talk
 
@@ -41,8 +45,15 @@ It helps me a lot to actually say out loud what I mean to say during the talk wh
 
 After I'm done with my slides, it's time to do the first of many runs. I start a timer and then say everything I want to say. It would then give me a rough idea of how much stuff I need to cut (if I took longer than my allotted time) or add (if I went under). I do this run and cut/add as many times as required until I hit the target time +/- at least a couple of minutes.
 
-The night before I should give my talk, I try to do at least three full-length runs. Crazy, I know, but that's just me.
+The night before I should give my talk, I try to do at least three full-length runs. Crazy, I know, but that's just me. I tend to stumble on some words, so I practise saying those, too. I try to lessen looking at the speaker notes after each run -- just glancing down at them if I find myself lost or forgetting the main point of a slide. For my last run of the night, I practise with my clicker.
 
-So yeah I guess speaking **_does_** come naturally for me -- albeit after a _lot_ of work. I guess what I mean to say is this: Giving a talk does not come naturally for me. It takes a lot of hard work and practice and patience.
+On the morning of my talk, I do another run. If I can, I look through all my slides at least an hour before my slot to make sure that I remember everything.
+
+------
+What I mean to say is this: Giving a talk does _not_ come naturally for me. It takes a lot of hard work and practise and patience.
+
+And I think this is something that we should all remember. Most of the time we see the result, but we rarely see the blood, sweat, and tears paid to bring about that result.
+
+Ask for help. Ask someone to look at your slides and give feedback, ask your local meetup group if you can do a practise run with them before your talk, ask a person who is in your target audience to listen to you practise, ask for a second opinion.
 
 <span style="font-size: small;">Thanks to Nick Butcher for letting me mangle his code and for early feedback on my drafts, Yigit Boyar for being patient with my stupid questions, Hugo Visser for the late night code reviews, and Francois Blavoet and Frederic Barthelery for reading through the drafts of my preso.</span>
