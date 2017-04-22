@@ -2,16 +2,17 @@
 ---
 
 @import "{{ site.theme }}";
-ul.share-buttons{
+div.share-buttons-container {
   list-style: none;
   padding: 0;
 }
 
-ul.share-buttons li{
-  display: inline;
+div.share-buttons-container a{
+  display: inline-block;
+  min-width: 20px;
 }
 
-ul.share-buttons .sr-only {
+div.share-buttons-container .sr-only {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -22,6 +23,9 @@ ul.share-buttons .sr-only {
   overflow: hidden;
 }
 .fa {
+  color: $body-text-color;
+}
+h4.share-head {  
   color: $header-bg-color;
-  opacity: 0.55;
+  font-weight: bold;
 }
