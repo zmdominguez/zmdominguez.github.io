@@ -7,13 +7,16 @@ layout: default
 <div class="blog-index"> 
 	{% for post in site.posts limit:3 %}
 	<h1>{{ post.title }}</h1>
-	<span style="font-size:small"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.date | date_to_string }}</a> | <i>tags:</i> 
+	<span style="font-size:small"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.date | date_to_string }}</a>
+		 | <a href="{{ post.url }}#disqus_thread">Comments</a> | <i>tags:</i> 
 		{% for tag in post.tags %}
 			{{ tag }} 
 		{% endfor %}
 		</span>
 		<br />
 		{{ post.content }}
+
+		{% include share-page.html %}
 	<br />
 	{% endfor %}
 </div>
