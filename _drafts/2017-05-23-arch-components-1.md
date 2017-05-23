@@ -160,6 +160,19 @@ For Topeka, we want to reset the database into an empty state when the user logs
 TopekaRoom.getARoom(context).categoryDao().insertCategory(category);
 ```
 
+Note here that as the docs mention, we should make sure that we stick to the Singleton pattern when getting an instance of our `Room`:
+```
+public static TopekaRoom getARoom(Context context) {
+    if (topekaRoom == null) {
+        topekaRoom = Room.databaseBuilder(context.getApplicationContext(),
+            TopekaRoom.class, DB_NAME_ROOM + DB_SUFFIX).build();
+    }
+
+    return topekaRoom;
+}
+```
+Note: This method should really be called `getInstance`, but I couldn't resist and wanted to be cheeky.
+
 If we are inserting a huge chunk of data, `Room` supports transactions like traditional SQL.
 ```java
 room.beginTransaction();
