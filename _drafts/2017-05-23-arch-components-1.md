@@ -8,13 +8,13 @@ tags:
 ---
 During the beginning of my Android career, one of the things I had to do was to save some data to _somewhere_. I found out that for my purposes, I had to use an SQLite database. Reading through the [docs](https://developer.android.com/training/basics/data-storage/databases.html), I was afraid. Petrified, even.
 
-What do you mean I have to write `Create TABLE` scripts? I have to do what now to upgrade a table? Do not forget that _required_ `_ID` column! What do you mean I have to write all my `Select` statements? Oh that means I have to define constants so that I don't typo table and column names all the time. Where is this cursor that I forgot to close? I have to remember column positions? What?
+What do you mean I have to write `Create TABLE` scripts? I have to do what now to upgrade a table? Do not forget that _required_ `_ID` column! What do you mean I have to deal with `Cursor`s? Oh that means I have to define constants so that I don't typo table and column names all the time. Where is this cursor that I forgot to close? I have to remember column positions? What?
 
 There are just so many pitfalls.
 
 [Room](https://developer.android.com/topic/libraries/architecture/room.html), the new architecture component [introduced during IO this year](https://youtu.be/MfHsPGQ6bgE), aims to help solve most -- if not all -- of these problems.
 
-`Room` abstracts away the nasty SQL-related things we need to do and instead gives us an easy, fluent way of declaring databases, tables, and their structures.
+`Room` abstracts away the nasty SQL-related boilerplate code we need to do and instead gives us an easy, fluent way of declaring databases, tables, and their structures.
 
 For today, we will aim to duplicate (and eventually shift) Topeka's existing table of available quiz categories to `Room`. [Topeka](https://github.com/googlesamples/android-topeka) is a sample project from Google's DevRel team that aims to demonstrate material design in action.
 
@@ -108,7 +108,7 @@ public abstract class TopekaRoom extends RoomDatabase {
 Now that we have set everything up, it should just work right? Not quite. Running the app spits out a bunch of errors.
 <p style="text-align: center"><a href="Room needs help"><img src="{{ site.baseurl }}/assets/cannot_figure_out_convert.png" ></a></p>
 
-Double-clicking the error brings us to the problematic field. `Room` cannot figure out how we want `List<Quizzes` to be stored. We really don't want it in this table anyway, so we can safely tell `Room` to ignore it:
+Double-clicking the error brings us to the problematic field. `Room` cannot figure out how we want `List<Quizzes>` to be stored. We really don't want it in this table anyway, so we can safely tell `Room` to ignore it:
 ```java
 @Ignore
 private List<Quiz> mQuizzes;
@@ -116,7 +116,7 @@ private List<Quiz> mQuizzes;
 
 The next error we have to deal with is that our `Category` model has a bunch of constructors present and `Room` cannot figure out which one we want to use.
 <p style="text-align: center"><a href="Room needs more help"><img src="{{ site.baseurl }}/assets/cannot_figure_constructor.png" ></a></p>
-We can fix this by making the fields we want in our entity to be public, or by making the required setters for our fields (which have been declared final), or by making a suitable constructor that `Room` can use. A "suitable constructor" means both types and names match the fields of our `Entity` 
+We can fix this by making the fields we want in our entity to be public, or by making the required setters for our fields (which have been declared final), or by making a suitable constructor that `Room` can use. A "suitable constructor" means both types and names match the fields of our `Entity`.
 
 ```java
 public Category(@NonNull String name, @NonNull String id, @NonNull Theme theme, boolean solved, int[] scores) {
