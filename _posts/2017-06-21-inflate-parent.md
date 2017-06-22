@@ -7,7 +7,7 @@ tags:
 ---
 I was updating a bit of code the other day that involved dynamically inflating views into a `LinearLayout` using `DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.row_related_property, container, false)`.
 
-I decided to jump in and update it to use the generated binding's inflate method: `RowRelatedProperty.inflate(LayoutInflater.from(context))` instead.
+I decided to jump in and update it to use the generated binding's inflate method: `RowRelatedPropertyBinding.inflate(LayoutInflater.from(context))` instead.
 
 This inflated layout has margins set on it's root, similar to this:
 ```xml
@@ -25,6 +25,10 @@ Happy with my changes, I ran the app and immediately noticed a problem. All the 
 My first thought was that generated binding inflation behaves differently. Odd. I looked through the code and it seems to call through to the same method. Weird.
 
 With a little help from my friends (holla [Hugo!](https://twitter.com/botteaap)), I was quickly pointed out the error of my ways. It is important to respect your parent(s)! And by respect I mean pass it on into `inflate`.
+
+```java
+RowRelatedPropertyBinding.inflate(LayoutInflater.from(context), container, false);
+```
 
 One thing I always forget is that any `layout_*` attribute is an instruction to the **parent**. Whenever I am reminded of this, I always go "Ah yes _of course_ I knew _that_".
 
