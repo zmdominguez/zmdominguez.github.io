@@ -44,3 +44,5 @@ Hmm this task is kinda weird. About 97% of the solution is already provided.
 
 __Task 12:__
 If I can say one thing about Kotlin, it's that it is _convenient_.
+
+And I'm done with all the introductory tasks. Wow!
