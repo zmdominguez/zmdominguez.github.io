@@ -4,3 +4,5 @@ description: An Android Love Affair
 google_analytics: UA-18386769-2
 gems:
   - jekyll-feed
+plugins:
+  - jemoji
