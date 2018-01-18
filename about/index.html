@@ -14,5 +14,8 @@ title: About
 	<i class="fa fa-github fa-fw" aria-hidden="true"></i>&nbsp; <a class="list-group-item" href="https://github.com/zmdominguez/">Github</a><br />
 	<i class="fa fa-google-plus fa-fw" aria-hidden="true"></i>&nbsp; <a class="list-group-item" href="https://plus.google.com/u/0/+ZarahDominguez">Google+</a><br />
   	<i class="fa fa-linkedin fa-fw" aria-hidden="true"></i>&nbsp; <a class="list-group-item" href="https://www.linkedin.com/in/zmdominguez/">LinkedIn</a>
+
+  	{% capture speaking %}{% include_relative speaking.md %}{% endcapture %}
+	{{ speaking | markdownify }}
   	
 		
