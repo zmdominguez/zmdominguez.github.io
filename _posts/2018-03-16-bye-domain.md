@@ -7,7 +7,7 @@ tags:
 Today is my last day at Domain. After three years, seven months, and three days, it is time to move out.
 
 I will forever be grateful to Domain for bringing me to Australia. Everyone has welcomed this tiny Filipina with open arms, helping me adjust to a new country (there were a _lot_ of trips to the pub).
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/bye_domain/sky_dive.jpg"><img src="{{ site.baseurl }}/assets/bye_domain/sky_dive.jpg" width="576" height="432"></a><br />
+<p style="text-align: center"><a href="{{ site.baseurl }}/assets/bye_domain/sky_dive.JPG"><img src="{{ site.baseurl }}/assets/bye_domain/sky_dive.JPG" width="576" height="432"></a><br />
 <small>They also made me jump out of a plane</small></p>
 
 
