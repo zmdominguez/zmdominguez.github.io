@@ -2,7 +2,7 @@ I give talks about development in general and about Android in particular. I als
 
 ## Speaking
 Don't Sweat the Small Stuff (Droidcon NYC 2018) [[Slides](https://docs.google.com/presentation/d/12ueLFJrAv-RAu7wweoqiOX6GiMaGcVbbnqKqv5afTgA/present?slide=id.p)]  
-<span style="font-size:small">27-28 August 2018, Brooklyn, New York</span>
+<span style="font-size:small">27-28 August 2018, New York, USA</span>
 
 Google I/O 2018 Recap (GDG Sydney) [[Slides](https://docs.google.com/presentation/d/1NnHW1mn8KAnUdoMhkSZ7pqADxbeAEZLh0lRL18nAwYE/present?slide=id.p)]  
 <span style="font-size:small">29 May 2018, Sydney, Australia</span>
