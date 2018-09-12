@@ -5,7 +5,7 @@ tags:
 - speaking
 - conference
 ---
-Last year, I wrote about my [talk preparation process](2017-04-17-all-it-takes-patience.md). I mentioned that I try to practice my talk verbatim a bunch of times, especially the night prior.  
+Last year, I wrote about my [talk preparation process]({{ site.baseurl }}{% post_url 2017-04-17-all-it-takes-patience.md %}). I mentioned that I try to practice my talk verbatim a bunch of times, especially the night prior.  
 
 I have been trialling out a new strategy for my talks recently and I think it works really well.  
 
