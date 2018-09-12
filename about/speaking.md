@@ -1,6 +1,9 @@
 I give talks about development in general and about Android in particular. I also organise a number of events mainly in Sydney, Australia.
 
 ## Speaking
+Twelve Years On: A Retrospective (Mobile Refresh 2018) [[Slides](https://docs.google.com/presentation/d/1wnYWzS3z-ZZP0nDwA6p_PRi62BR9BnPO3-lNUoKVPMk/present?slide=id.p)]  
+<span style="font-size:small">07 September 2018, Wellington, New Zealand</span>
+
 Don't Sweat the Small Stuff (Droidcon NYC 2018) [[Slides](https://docs.google.com/presentation/d/12ueLFJrAv-RAu7wweoqiOX6GiMaGcVbbnqKqv5afTgA/present?slide=id.p)]  
 <span style="font-size:small">27-28 August 2018, New York, USA</span>
 
