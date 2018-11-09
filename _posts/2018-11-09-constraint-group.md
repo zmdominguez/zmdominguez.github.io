@@ -14,7 +14,7 @@ One bit of task that I find myself doing over and over again is managing a bunch
 If you asked me two years ago to implement the layout above, I would have:
 - wrapped the divider, the section title, and that extra text in a `LinearLayout`
 - added an `OnCheckedChangeListener` to the `CheckBox`
-- manage the `LinearLayout`'s visibility in the listener implementation
+- managed the `LinearLayout`'s visibility in the listener implementation
 
 Or in code:
 ```java
