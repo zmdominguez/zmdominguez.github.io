@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Selectively Reset Your SharedPreferences"
+title: "Selectively Resetting SharedPreferences"
 tags:
 - android
 - shared preferences
@@ -29,7 +29,7 @@ This function assumes that the `SharedPreferences` files your app owns follow th
 
 For better readability, the application ID, the leading underscore, and the file extension are stripped out in the UI.  
 
-A neat thing to add here is put up a `Toast` or a `Snackbar` to confirm that the files were reset. We opted to leave that out for this gist, and keep it basic.  
+A neat thing to add here is put up a `Toast` or a `Snackbar` to confirm that the files were reset.    
 
 Anyway! Enough babble, enjoy the gist!  
 
