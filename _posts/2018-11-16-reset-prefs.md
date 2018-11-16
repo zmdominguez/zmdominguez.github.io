@@ -18,14 +18,12 @@ This function is meant to be used within a dev or debug drawer. It aims to provi
 <p style="text-align: center"><a href="{{ site.baseurl }}/assets/reset_prefs/alert_choose_file.png"><img src="{{ site.baseurl }}/assets/reset_prefs/alert_choose_file.png" width="320"></a><br />
 <small>Human-readable and neat 👌</small></p>  
 
-There is a caveat though, and depending on your set up, you might need to tweak the code a bit.  
-
 Aside from the default file generated via [`PreferenceManager.getDefaultSharedPreferences()`](https://developer.android.com/reference/android/preference/PreferenceManager.html#getDefaultSharedPreferences(android.content.Context)), the system does not really enforce a naming convention. They _do_ recommend [prefixing files with the application ID](https://developer.android.com/training/data-storage/shared-preferences#GetSharedPreferences) though!  
 
 <p style="text-align: center"><a href="{{ site.baseurl }}/assets/reset_prefs/device_explorer.png"><img src="{{ site.baseurl }}/assets/reset_prefs/device_explorer.png"></a><br />
 <small>Naming is hard</small></p>  
 
-This function assumes that the `SharedPreferences` files your app owns follow this naming convention: `MY.APPLICATION.ID_my_preference_file`. Of course, there's nothing stopping you from updating it to adapt to your needs!  
+This function assumes that the `SharedPreferences` files your app owns follow this naming convention: `MY.APPLICATION.ID_my_preference_file`. Of course, there's nothing stopping you from tweaking the current implementation to adapt to your needs!  
 
 For better readability, the application ID, the leading underscore, and the file extension are stripped out in the UI.  
 
