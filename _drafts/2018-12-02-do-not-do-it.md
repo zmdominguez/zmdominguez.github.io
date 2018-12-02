@@ -1,0 +1,37 @@
+---
+layout: post
+title: "Do Not Do It"
+tags:
+- android
+---
+Over the last year or so, we have been writing _a lot_ of Kotlin at work. There is a consensus within the team that we all like working with the language. It makes it easy to write things by reducing a lot of boilerplate, actively enforcing nullability rules makes business logic obvious, having the option to make extension functions offers a lot of flexibility.
+
+However, as a wise man once said, with great power comes great resposibility. There have been a few times where I see code written in a "Kotliny" way that I feel makes things look more complicated than it should be.
+
+Take this one I saw at a recent pull request:
+```kotlin
+isSetUpDone?.run {
+   if (shouldShowNotification()) {
+       showNotification()
+   }
+} ?: showNotification()
+```
+
+I stared at that piece of code for five minutes, trying to figure out what it does. I read and re-read. Maybe I am too stupid to understand it. I asked the author -- "Maybe put a comment in to figure out what this is doing? It is a bit hard to read." I got a response: "Let me come over and explain." He then proceeded to explain to me what `run` and `?:` does (and I did not have the energy to ask him to stop mansplaining 🙄 ).
+
+Now, my friends, that is not the point; and I have talked a bit about this in the past.
+<p style="text-align: center"><a href="https://docs.google.com/presentation/d/1wnYWzS3z-ZZP0nDwA6p_PRi62BR9BnPO3-lNUoKVPMk/edit#slide=id.g3f9614b5c8_0_4" alt="Complex != Genius"><img src="{{ site.baseurl }}/assets/kotlin_run/20180907_ complex.png" height="320" ></a><br />
+<small>Complex != Genius</small></p>
+
+Just because something *looks* complex does not mean it's ingeniuty at work. What if somebody else new joins the team? What if somebody else needs to make changes to this feature? What if the original author left the company and won't be there to come over and explain anymore?
+
+After talking to the author, we have come to the conclusion that there what we really wanted to do was call `showNotification()` only if all conditions are satisfied. So really, we can move `isSetUpDone` (which _*is*_ one of the conditions!) to inside the `shouldShowNotification()` function, and we end up with a much simpler, much more readable implementation.
+
+```kotlin
+if (shouldShowNotification()) {
+   showNotification()
+}
+```
+I guess sometimes we get too caught up with making sure we can show off our chops and use these fancy new language features that we lose sight of what is really important -- doing our bit in [writing code that lasts forever](https://www.youtube.com/watch?v=YZstpc2939s).
+
+If there is one thing I have learned from years and years of writing _and reading_ code, it is that it takes a lot more time and effort to make things as simple as possible.
