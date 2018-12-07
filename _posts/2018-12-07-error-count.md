@@ -4,10 +4,10 @@ title: "Okay Google, Show Me a Million Errors"
 tags:
 - android
 ---
-EDIT:
+**EDIT**  
 Aaaaaaaand an update literally two minutes after I posted this: I was told that the data binding fix made it to the latest [Android Studio Canary release](https://androidstudio.googleblog.com/2018/12/android-studio-34-canary-7-available.html).
 
-I still opt to keep the config in my gradle file, but should be less necessary now.
+I still opt to keep the config in my gradle file, but should be less necessary now.  
 /EDIT
 
 
