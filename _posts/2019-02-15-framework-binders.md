@@ -39,6 +39,8 @@ To [documentation](https://developer.android.com/topic/libraries/data-binding/bi
 - `type` = then look for the implementation in this class
 - `method` =  of a method with this name in the class defined in `type`
 
+Note: If you are interested in how the data binding library automagically sets the listeners and manages the interfaces, I highly suggest to checkout the generated binding file of your layout.
+
 Oooh notice how `setOnEditorActionListener` is the method we actually call in our own custom `BindingAdapter`! Looks like we are on to something!
 
 Let's try to use this attribute then:
