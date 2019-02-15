@@ -55,6 +55,8 @@ Let's try to use this attribute then:
 ```
 Note: If you are not familiar with the lambda syntax I am using here, this is called a "listener binding" and you can read all about it [here](https://developer.android.com/topic/libraries/data-binding/expressions#event_handling).
 
+Second note: Lint will tell you there is no such attribute. Lint lies!
+
 The next bit we have to do would be to tell our handler what needs to happen when `onEditorAction` is called. For simplicity, let's say we want to show a `Toast` when the user clicks on the Send button.
 ```
 fun onEditorActionClicked() : Boolean {
