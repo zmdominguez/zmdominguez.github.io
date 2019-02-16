@@ -94,9 +94,9 @@ And we can finally delete our custom `BindingAdapter`! :tada:
 :exclamation: Remember as well that data binding by default looks for methods prefixed with `set`. This means that if we can call a setter programmatically, we do not have to make a `BindingAdapter` for it. Some examples are `setEnabled()`, `setBackgroundColor()`, etc.
 
 So in summary:  
-:no_good: If we want to call an existing setter, no need to make a custom `BindingAdapter`. 
-:no_good: If we want to hook up an existing interface, no need to make a custom `BindingAdapter`. 
-:ok_woman: When implementing a listener binding, the return values must match exactly  
-:information_desk_person: When in doubt, explore existing framework binders
+- :no_good: If we want to call an existing setter, no need to make a custom `BindingAdapter`.
+- :no_good: If we want to hook up an existing interface, no need to make a custom `BindingAdapter`.
+- :ok_woman: When implementing a listener binding, the return values must match exactly
+- :information_desk_person: When in doubt, explore existing framework binders
 
 Have fun binding!
