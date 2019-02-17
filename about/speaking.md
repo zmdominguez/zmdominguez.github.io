@@ -40,6 +40,7 @@ Material Podcast: [Episode 70](https://www.relay.fm/material/70)
 Fragmented: [Google I/O 2016](http://fragmentedpodcast.com/episodes/43/)
 
 ## Organising
-[DevFest Sydney 2017](http://devfest.org.au/)  
+[DevFest Sydney 2018](http://devfest.org.au/)  
+[DevFest Sydney 2017](http://2017.devfest.org.au/)  
 [DevFest Sydney 2016](http://2016.devfest.org.au/)  
 [DevFest Sydney 2015](http://2015.devfest.org.au/)  
