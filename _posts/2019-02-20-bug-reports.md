@@ -43,7 +43,7 @@ Sometimes, [my feature requests](https://issuetracker.google.com/issues/37136823
 The trick is to make the bug report as great as possible. Let's take [this bug for example](https://issuetracker.google.com/issues/38213600). I encountered an issue whilst running "Remove Unused Resources" from Android Studio and wanted to report it.
 
 To gather the relevant information about my machine, I opened Android Studio and then chose "About Android Studio". I then clicked on the copy icon in the dialogue box that appeared; that copies into my clipboard almost all the information asked for by the template!
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/bug_reports/copy_info.png"><img src="{{ site.baseurl }}/bug_reports/copy_info.png"></a><br />
+<p style="text-align: center"><a href="{{ site.baseurl }}/assets/bug_reports/copy_info.png"><img src="{{ site.baseurl }}/bug_reports/copy_info.png" width="468" height="228"></a><br />
 <small>Click that!</small></p>
 
 I then provided a short overview of the reproduction steps; I try to follow the given-when-then pattern. Set the scene first to give the developers some context of what we are trying to achieve. In this case, I have provided a zip file of sample project that reproduces the error.
