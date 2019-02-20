@@ -6,7 +6,7 @@ tags:
 ---
 "This tool sucks :facepunch::rage::rage::rage::rage:"
 
-"Ugh WTF this is so stupid :poop:"
+"Ugh WTF this is so stupid :poop::fire::fire::fire:"
 
 These are just some of the things I have heard developers say over the years whilst working on Android. Sometimes they are trying to figure something out and there is not enough documentation, other times they are trying to make their tools do something and it just won't work. Oftentimes, it is because they are expecting something to happen and it does not.
 
@@ -16,14 +16,14 @@ So what should we do then?
 
 #### My answer has, and always will be, "have you filed a bug for it?"
 
-Android has its own dedicated issue tracker that organised into several components. [This page](https://source.android.com/setup/contribute/report-bugs) enumerates those components and have some very good tips on how and when to file a bug.
+Android has its own dedicated issue tracker  organised into several components. [This page](https://source.android.com/setup/contribute/report-bugs) enumerates those components and have some very good tips on how and when to file a bug.
 
 It is important to select the correct component because (1) it makes the relevant team aware of your issue, and (2) each component may have a template for reporting issues.
  
 <p style="text-align: center"><a href="{{ site.baseurl }}/assets/bug_reports/components_filter.png"><img src="{{ site.baseurl }}/bug_reports/components_filter.png" width="478" height="315"></a><br />
 <small>Android Studio component with template</small></p>
 
-When writing up a bug report, think of what you, as a developer, would find useful if it were _you_ receiving the issue. A _"This app sucks"_ report is way less helpful than _"I have trouble logging in with my credentials that work on my computer"_.
+When writing up a bug report, think of what you, as a developer, would find useful if it were _you_ receiving the issue. _"This app sucks"_ is way less helpful than _"I have trouble logging in with my credentials that work on my computer"_.
 
 I try to be as helpful to the developer as much as I can because we both have the same end-goal: **to fix a verified issue**.
 
@@ -38,17 +38,17 @@ I might be totally wrong but I'd like to think [my bug report](https://issuetrac
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
 Sometimes, [my feature requests](https://issuetracker.google.com/issues/37136823) actually get built too! :dancer:
 
-#### What makes a good bug report?
+#### Do you want to get _your_ issues fixed too?
 
-So how did I make the Tools team do what I want? The trick is to make the bug report as great as possible. Let's take [this issue for example](https://issuetracker.google.com/issues/38213600). I encountered an issue whilst running Remove Unused Resources from Android Studio and wanted to report it.
+The trick is to make the bug report as great as possible. Let's take [this bug for example](https://issuetracker.google.com/issues/38213600). I encountered an issue whilst running "Remove Unused Resources" from Android Studio and wanted to report it.
 
-To gather the relevant information about my machine, I opened Android Studio and then chose "About Android Studio". I then clicked on the copy icon in the dialogue box that appeared; that copies into my clipboard all the information asked for by the template!
+To gather the relevant information about my machine, I opened Android Studio and then chose "About Android Studio". I then clicked on the copy icon in the dialogue box that appeared; that copies into my clipboard almost all the information asked for by the template!
 <p style="text-align: center"><a href="{{ site.baseurl }}/assets/bug_reports/copy_info.png"><img src="{{ site.baseurl }}/bug_reports/copy_info.png"></a><br />
 <small>Click that!</small></p>
 
-I then provided a short overview of the reproduction steps. A good idea would be to follow the given-when-then pattern. Set the scene first to give the developers context of what we are trying to achieve. In this case, I have provided a zip file of sample project that reproduces the error.
+I then provided a short overview of the reproduction steps; I try to follow the given-when-then pattern. Set the scene first to give the developers some context of what we are trying to achieve. In this case, I have provided a zip file of sample project that reproduces the error.
 
-Next, I reported was I was trying to do and what happened as a result. If there are multiple steps that need to happen first, I enumerate them all in a list. I have also provided a screenshot so that the team can quickly verify that they have reproduced my error exactly as I, as a consumer, see it.
+Next, I reported what I was trying to do and what happened as a result. If there are multiple steps that need to happen first, I enumerate them all in order. In this bug, I have also provided a screenshot so that the team can quickly verify that they have reproduced my error exactly as I see it.
 
 And finally, I tried to provide as much as detail as possible. Were there scenarios where this does not happen?
 > It looks like Studio detects layouts inflated through the generated binding file's `.inflate()` method as unused. Views inflated using DataBindingUtil are not removed. ([From here](https://issuetracker.google.com/issues/38213600#comment1))
