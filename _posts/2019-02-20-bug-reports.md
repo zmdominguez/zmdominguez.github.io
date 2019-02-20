@@ -65,6 +65,8 @@ When I found a use case that was missed by the initial fix, I provided another s
 
 Really, a sample project is like a picture. It paints a thousand words.
 
+**EDIT (20190221):**  I cannot believe I need to say this but I will say it anyway: **_BE NICE_**. No one wants to talk to a jerk.
+
 #### A good bug report is like a good story.
 
 It presents the characters, introduces conflict, and finally, a denouement.
