@@ -11,7 +11,7 @@ In this post I want to share some interesting learnings I had whilst implementin
 ### Android Studio support is... limited.
 :point_up: For this exercise, I am using Android Studio 3.5 Beta 4.
 
-This becomes tricky as some of the required attributes _can_ use resource references. The table below shows what those are:
+And by limited I mean resource references do not autocomplete at all. This becomes tricky as some of the required attributes _can_ use resource references. The table below shows what those are:
 
 Allowed | Not allowed
 --- | ---
