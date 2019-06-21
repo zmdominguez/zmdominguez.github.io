@@ -75,7 +75,7 @@ And applying this to our Toolbar (remember it is now a **_style_** !):
 ```
 
 And this works really well, until....
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/tintables/no_x.png"><img src="{{ site.baseurl }}/assets/tintables/no_x.png" width="270" height="540"></a><br /><small>:scream:</small></p>
+<p style="text-align: center"><a href="{{ site.baseurl }}/assets/tintables/no_x.png"><img src="{{ site.baseurl }}/assets/tintables/no_x.png" width="270" height="540"></a><br /><small>The close button is now invisible :scream:</small></p>
 
 The only difference between this screen and the others is that we provide a vector drawable for the navigation icon:
 ```xml
