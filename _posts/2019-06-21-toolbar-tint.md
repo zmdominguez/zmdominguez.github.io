@@ -9,7 +9,7 @@ A few weeks ago, I merged a pull request that updates our app's theme to Materia
 <center><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">My team is SMASHING IT. 💪 <a href="https://t.co/YoJmRF1ZLJ">pic.twitter.com/YoJmRF1ZLJ</a></p>&mdash; Zarah Dominguez 🦉 (@zarahjutz) <a href="https://twitter.com/zarahjutz/status/1135432513688465408?ref_src=twsrc%5Etfw">June 3, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
 
-I have been referencing the [MDC Catalog](https://github.com/material-components/material-components-android/tree/master/catalog) app a lot during this exercise; and I thought it would be a good idea to pattern how we organise our themes ans styling based on that app. (Hey they must know what they're doing, right?)
+I have been referencing the [MDC Catalog](https://github.com/material-components/material-components-android/tree/master/catalog) app a lot during this exercise; and I thought it would be a good idea to pattern how we organise and apply our theming and styling based on that app. (Hey they must know what they're doing, right?)
 
 We have two kinds of Toolbars in our app -- the first one with our standard primary colour, and a "clean" variant.
 
