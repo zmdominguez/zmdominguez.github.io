@@ -13,7 +13,7 @@ I have been referencing the [MDC Catalog](https://github.com/material-components
 
 We have two kinds of Toolbars in our app -- the first one with our standard primary colour, and a "clean" variant.
 
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/tintables/toolbar_types.jpg"><img src="{{ site.baseurl }}/assets/tintables/toolbar_types.jpg"  width="581" height="588"></p>
+<p style="text-align: center"><a href="{{ site.baseurl }}/assets/tintables/toolbar_types.jpg"><img src="{{ site.baseurl }}/assets/tintables/toolbar_types.jpg"  width="581" height="588"></a></p>
 
 When we initially set up our theming, we made this theme overlay (read [about theme overlays here](https://medium.com/androiddevelopers/theming-with-appcompat-1a292b754b35)) to style our toolbar and give it that green arrow:
 ```xml
