@@ -30,7 +30,7 @@ We then set this in our Toolbars as `android:theme`:
     android:theme="@style/ThemeOverlay.Toolbar.Inverse" />
 ```
 
-The MDC Catalog app uses **_styles_** instead of **_themes_** (Anita Singh has an [amazing talk on styles, themes, and material design](https://speakerdeck.com/anitas3791/styles-themes-material-theming-oh-my)), so I set about copying [their technique](https://github.com/material-components/material-components-android/blob/master/catalog/java/io/material/catalog/application/theme/res/values/styles.xml#L19).
+The MDC Catalog app uses **_styles_** instead of **_themes_**, so I set about copying [their technique](https://github.com/material-components/material-components-android/blob/master/catalog/java/io/material/catalog/application/theme/res/values/styles.xml#L19). (Side note: Anita Singh has an [amazing talk on styles, themes, and material design](https://speakerdeck.com/anitas3791/styles-themes-material-theming-oh-my))
 
 We immediately run into one problem: in our theme-based approach, we can set the `colorControlNormal` attribute in our theme overlay, but we cannot do that anymore with our style-based approach.
 
@@ -44,7 +44,7 @@ We definitely want our green arrow though, and we can look at the MDC source cod
     <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Toolbar.Surface</item>
 </style>
 ```
-:thinking: Interesting note there, we should totally take note of that.
+:thinking: Interesting note there, we should totally remember that.
 
 Taking a peek at the [referenced theme overlay](https://github.com/material-components/material-components-android/blob/8f622283d18466620a280f6f6bbb32fafb157efd/lib/java/com/google/android/material/appbar/res/values/styles.xml#L78), we see the attribute we want :tada: :
 ```xml
@@ -77,8 +77,7 @@ And applying this to our Toolbar (remember it is now a **_style_** !):
 And this works really well, until....
 <p style="text-align: center"><a href="https://imgur.com/PX48bpp"><img src="https://imgur.com/PX48bpp"></a><br /><small>:scream:</small></p>
 
-The only difference between this screen and the others it that we provide a vector drawable for the navigation icon.
-
+The only difference between this screen and the others is that we provide a vector drawable for the navigation icon:
 ```xml
 <androidx.appcompat.widget.Toolbar
     ...
