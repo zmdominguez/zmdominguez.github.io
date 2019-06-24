@@ -4,7 +4,7 @@ title: "On-Device Debugging Part II: Timbeeeeeeer!"
 tags:
 - android
 ---
-xOver the past year, my team have been steadily building a Developer Options screen for our app. It is a simple [`PreferenceScreen`](https://developer.android.com/reference/androidx/preference/PreferenceScreen.html) available on debug builds that aims to help us:
+Over the past year, my team have been steadily building a Developer Options screen for our app. It is a simple [`PreferenceScreen`](https://developer.android.com/reference/androidx/preference/PreferenceScreen.html) available on debug builds that aims to help us:
 - figure out what's going on without needing to be attached to a computer
 - test various configurations without re-installing
 - have a host for various experimentations we are trying to explore
@@ -19,7 +19,7 @@ One of the tools we utilise a lot at Woolworths is [Timber](https://github.com/J
 
 Before, when we have a build for testing and things don't go to plan, we get a screenshot pretty much like this:
 <center>
-    <a href="https://imgur.com/kIB3ojU"><img src="https://i.imgur.com/kIB3ojU.png" title="source: imgur.com" /><br/>
+    <a href="https://imgur.com/Bzleb1m"><img src="https://i.imgur.com/Bzleb1m.png" title="source: imgur.com" /></a><br/>
 <small>Uh :scream_cat:</small></a>
 </center>
 
@@ -30,8 +30,8 @@ To help in these situations, we turned to Timber. We log those "We should never 
 This screen shows the stacktrace, if there's any and some basic information about the build and the device. We also decided to use this screen to log any uncaught exceptions. At the bottom of the screen is a button to send the crash log through via an [Intent Chooser](https://developer.android.com/training/sharing/send).
 
 <center>
-    <a href="https://imgur.com/StEAFvr"><img src="https://i.imgur.com/StEAFvr.png" title="source: imgur.com" /><br/>
-<small>Crash log screen variations</small></a></a>
+    <a href="https://imgur.com/StEAFvr"><img src="https://i.imgur.com/StEAFvr.png" title="source: imgur.com" /></a><br/>
+<small>Crash log screen variations</small>
 </center>
 
 To bring this to life, we override `Timber`'s `e`:
