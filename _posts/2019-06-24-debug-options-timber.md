@@ -14,8 +14,10 @@ In this series of posts, I will share what these various options are and how we 
 (If you are not familiar with [`PreferenceFragmentCompat`](https://developer.android.com/reference/kotlin/androidx/preference/PreferenceFragmentCompat.html), I highly suggest to read about that first before proceeding. You can start with this [AndroidX guide](https://developer.android.com/guide/topics/ui/settings.html) on Settings.)
 
 Read Part I (Now It's On, Now It's Off) [here](https://zarah.dev/2019/06/22/debug-options-toggles.html).
+
 ---
-One of the tools we utilise a lot at Woolworths is [Timber](https://github.com/JakeWharton/timber). We use it not just to help us with debugging during development, but also to help us figure out problems early during testing as well as to keep an eye on things in production.
+
+One of the tools we utilise a lot at Woolworths is [Timber](https://github.com/JakeWharton/timber). We use it not just to help us with debugging during development, but also to figure out problems early during testing as well as to keep an eye on things in production.
 
 Before, when we have a build for testing and things don't go to plan, we get a screenshot pretty much like this:
 <center>
@@ -27,7 +29,7 @@ We try to figure out what they were trying to do before the app crashed, replica
 
 To help in these situations, we turned to Timber. We log those "We should never get here!!!" scenarios using `Timber.e`. In production, those logs get sent to Fabric via `Crashlytics.log()`. In debug builds, those logs get sent to a crash log screen.
 
-This screen shows the stacktrace, if there's any and some basic information about the build and the device. We also decided to use this screen to log any uncaught exceptions. At the bottom of the screen is a button to send the crash log through via an [Intent Chooser](https://developer.android.com/training/sharing/send).
+This screen shows the stacktrace, if there's any, and some basic information about the build and the device. We also decided to use this screen to log any uncaught exceptions. At the bottom of the screen is a button to send the crash log through via an [Intent Chooser](https://developer.android.com/training/sharing/send).
 
 <center>
     <a href="https://imgur.com/StEAFvr"><img src="https://i.imgur.com/StEAFvr.png" title="source: imgur.com" /></a><br/>
@@ -76,7 +78,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-The "Send crash" button at the bottom of the screen sends out an `ACTION_SEND` `Intent` so that users can send the information via email, Slack, or whatever other app they choose.
+The "Send crash" button at the bottom of the screen sends out an `ACTION_SEND` `Intent` so that users can send the information via email, Slack, or whatever other app they choose (I also wrote about that [here](https://zdominguez.com/2017/03/31/sharing-is-caring.html)!).
 
-This may seem like a simple thing, but time and again it has helped us quickly figure out issues in a more meaningful way. Even if those helping us test choose to send a screenshot, there is more relevant information rather than the generic crash dialog.
+This may seem like a simple thing, but time and again it has helped us quickly figure out issues in a more meaningful way. Even if those helping us test choose to send a screenshot, there is more relevant information rather than the generic crash dialog. :revolving_hearts:
 
