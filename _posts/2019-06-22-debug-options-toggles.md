@@ -84,7 +84,7 @@ for (feature in Feature.values()) {
 ```
 For simplicity, we use the `Feature` enum's name as the `SharedPreference` key for each feature toggle, as well as the label that appears beside the `Switch`.
 
-What the function `isFeatureEnabled()` does is simply return Firebase-provided values for production builds, and figure out what the our preferences are for debug builds:
+What the function `isFeatureEnabled()` does is simply return Firebase-provided values for production builds, and figure out what our preferences are for debug builds:
 ```kotlin
 private fun isFeatureEnabledInDebug(prefs: SharedPreferences, feature: Feature): Boolean {
     val isOverrideOn = prefs.getBoolean(getString(R.string.debug_override_firebase), false)

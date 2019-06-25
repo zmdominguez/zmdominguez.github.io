@@ -22,7 +22,7 @@ One of the tools we utilise a lot at Woolworths is [Timber](https://github.com/J
 Before, when we have a build for testing and things don't go to plan, we get sent a screenshot pretty much like this:
 <center>
     <a href="https://imgur.com/Bzleb1m"><img src="https://i.imgur.com/Bzleb1m.png" title="source: imgur.com" /></a><br/>
-<small>Uh :scream_cat:</small></a>
+<small>Uh :scream_cat:</small>
 </center>
 
 We try to figure out what they were trying to do before the app crashed, replicate the exact conditions they had prior, and try and try and try. More often than not, we hit the "that shouldn't have happened" wall -- even though it obviously just did. :woman_facepalming:
