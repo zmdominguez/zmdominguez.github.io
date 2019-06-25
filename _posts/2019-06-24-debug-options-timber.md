@@ -64,14 +64,14 @@ enum class LogType(val additionalMessage: String, @ColorRes val background: Int)
 
 The crash screen implementation is pretty straightforward, we retrieve the extras and use data binding to display the message and style the header. (For the curious, I previously wrote about [using resource references in databinding](https://zarah.dev/2016/07/19/using-resource-ids-in-data-binding.html))
 
-Sometimes it's still useful to see the logs in Logcat though, so we log the stacktrace there as well:
+Since we use the crash log screen for uncaught exceptions as well, we directly call the `Activity` when something goes wrong. This means that it skips the `Timber` processing but sometimes it's still useful to see the logs in Logcat, so we log the stacktrace there as well:
 ```kotlin
 @SuppressLint("LogNotTimber")
 override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     // ...
 
-    // We still want to display the stack trace in Logcat
+    // We still want to display the stack trace in Logcat for uncaught exceptions
     // but are not using Timber.e here lest we get into an infinite loop
     Log.e("FIXME", Log.getStackTraceString(stackTrace))
 
