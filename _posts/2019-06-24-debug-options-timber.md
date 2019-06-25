@@ -19,7 +19,7 @@ Read Part I (Now It's On, Now It's Off) [here](https://zarah.dev/2019/06/22/debu
 
 One of the tools we utilise a lot at Woolworths is [Timber](https://github.com/JakeWharton/timber). We use it not just to help us with debugging during development, but also to figure out problems early during testing as well as to keep an eye on things in production.
 
-Before, when we have a build for testing and things don't go to plan, we get a screenshot pretty much like this:
+Before, when we have a build for testing and things don't go to plan, we get sent a screenshot pretty much like this:
 <center>
     <a href="https://imgur.com/Bzleb1m"><img src="https://i.imgur.com/Bzleb1m.png" title="source: imgur.com" /></a><br/>
 <small>Uh :scream_cat:</small></a>
