@@ -24,7 +24,7 @@ A lot of things affect how the Woolworths app behaves. Sometimes databases get o
 To manage and keep track of all these things, we included a set of actions in our developer options.
 
 <center>
-    <a href="https://imgur.com/hyYqCEf"><img src="https://i.imgur.com/hyYqCEf.png" title="source: imgur.com" /></a><br/>
+    <a href="https://imgur.com/hyYqCEf"><img src="https://i.imgur.com/hyYqCEf.png?5" title="source: imgur.com" /></a><br/>
 <small>Additional actions</small></center>
 
 ### Environment Switcher
@@ -79,7 +79,7 @@ Sometimes we want the UI to change based on some device qualifications like say 
 This screen shows some basic information that might affect how our app displays something to the user:
 
 <center>
-    <a href="https://imgur.com/Qz5kEDi"><img src="https://i.imgur.com/Qz5kEDi.png" title="source: imgur.com" /></a><br/>
+    <a href="https://imgur.com/Qz5kEDi"><img src="https://i.imgur.com/Qz5kEDi.png?1" title="source: imgur.com" /></a><br/>
 <small>Minimum information to debug device-dependent UI</small>
 </center>
 
