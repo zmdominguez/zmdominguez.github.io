@@ -4,18 +4,18 @@ title: "On-Device Debugging Part III: Inspect, Reset, Repeat"
 tags:
 - android
 ---
-Over the past year, my team have been steadily building a Developer Options screen for our app. It is a simple [`PreferenceScreen`](https://developer.android.com/reference/androidx/preference/PreferenceScreen.html) available on debug builds that aims to help us:
+Over the past year, my team have been steadily building a Developer Options screen for our app. It is a simple [`PreferenceScreen`](https://developer.android.com/reference/androidx/preference/PreferenceScreen.html) available on debug builds that help us:
 - figure out what's going on without needing to be attached to a computer
 - test various configurations without re-installing
 - have a host for various experimentations we are trying to explore
 
 In this series of posts, I will share what these various options are and how we made them.
 
-(If you are not familiar with [`PreferenceFragmentCompat`](https://developer.android.com/reference/kotlin/androidx/preference/PreferenceFragmentCompat.html), I highly suggest to read about that first before proceeding. You can start with this [AndroidX guide](https://developer.android.com/guide/topics/ui/settings.html) on Settings.)
-
-Read the other posts in the series:
+Read the other posts in this series:
 - [Part I: Now It's On, Now It's Off](https://zarah.dev/2019/06/22/debug-options-toggles.html)
 - [Part II: Timbeeeeeeer!](https://zarah.dev/2019/06/24/debug-options-timber.html)
+
+(If you are not familiar with [`PreferenceFragmentCompat`](https://developer.android.com/reference/kotlin/androidx/preference/PreferenceFragmentCompat.html), I highly suggest to read about that first before proceeding. You can start with this [AndroidX guide](https://developer.android.com/guide/topics/ui/settings.html) on Settings.)
 
 ---
 
@@ -29,7 +29,7 @@ To manage and keep track of all these things, we included a set of actions in ou
 
 ### Environment Switcher
 
-We have a few different environments that the apps can use. Having a switcher built into the build means we can easily test our app's behaviour on any of the available environments.
+We have a few different environments that the apps can use. Having a switcher built into the app means we can easily test our app's behaviour on any of the available environments.
 
 <center>
     <a href="https://imgur.com/HvK6quk"><img src="https://i.imgur.com/HvK6quk.png" title="source: imgur.com" /></a><br/>
@@ -44,7 +44,7 @@ Your testers are users too, so UX is important. :wink:
 
 Last year, Woolworths have completely [removed single-use plastic bags](https://www.woolworthsgroup.com.au/page/media/Latest_News/single-use-plastic-shopping-bags-gone-for-good-at-woolworths) from all stores nationwide. To help with the transition to reusable bags, we built a feature into the app that allows users to enable bag reminders for their chosen store. We also included a "nudge" feature to assist with discovery -- the app would nudge you three times to set up your reminders, after which it assumes you do not want to set it up.
 
-This is one of the many use cases where we leveraged `SharedPreference`s. This whole feature is based on geofencing, which can be a little finicky. We decided to include a `SharedPreference` inspector so that we can easily answer questions like "I did not get any set up notifications, I'm pretty sure I have only gotten two?".
+This is one of the many use cases where we leveraged `SharedPreference`s. This whole feature is based on geofencing around a store, which can be a little finicky. We decided to include a `SharedPreference` inspector so that we can easily answer questions from our testers like "I did not get any set up notifications, I'm pretty sure I have only gotten two?".
 
 Being able to see what current values have been saved in the app allows us to quickly triage issues in the wild.
 
@@ -74,7 +74,7 @@ This option has helped us a lot debugging our nudges out in the wild. It elimina
 
 ### Show Device Info
 
-Sometimes we want the UI to change based on some device qualifications like say the smallest available width. Using the emulator makes it super easy for us to easily test these visual breakpoints. But for someone who does not have access to the emulator, it can be quite hard to verify the UI changes we expect.
+Sometimes we want the UI to change based on some device qualifications like say the smallest available width. Using the emulator makes it super easy for us to test these visual breakpoints. But for someone who does not have access to the emulator, it can be quite hard to verify the UI changes we expect.
 
 This screen shows some basic information that might affect how our app displays something to the user:
 
@@ -89,9 +89,9 @@ The "Account Information" section contains some basic information about the user
 
 ### Show Diagnostic Info
 
-There are a lot more information that affect a user's experience with the Woolworths app other than if they are logged in or not. Inventory is different store-to-store, Rewards and offers may be targetted, legal requirements are different based on the state, among other things.
+There is a lot more information that affects a user's experience with the Woolworths app other than if they are logged in or not. Inventory is different store-to-store, Rewards and offers may be targetted, legal requirements are different based on the state, among other things.
 
-All of these things may affect the app one way or another, and we use a Diagnostics screen to display all those information (for obvious reasons I cannot put a screenshot here).
+All of these things may affect the app one way or another, and we use a Diagnostics screen to display all those information.
 
 
 And with that we wrap up this post on our developer options for UI-affecting variables. In the next post, we will talk about logging, Toasts, and more fun stuff! :confetti_ball:
