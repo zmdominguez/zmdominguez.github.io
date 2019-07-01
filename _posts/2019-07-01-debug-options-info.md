@@ -49,7 +49,7 @@ This is one of the many use cases where we leveraged `SharedPreference`s. This w
 Being able to see what current values have been saved in the app allows us to quickly triage issues in the wild.
 
 <center>
-<a href="https://imgur.com/pnanigt"><img src="https://i.imgur.com/pnanigt.png" title="source: imgur.com" /></a><br/>
+<a href="https://imgur.com/rlVuxP7"><img src="https://i.imgur.com/rlVuxP7.png" title="source: imgur.com" /></a><br/>
 <small>Remember that override Firebase kill switch?</small>
 </center>
 
