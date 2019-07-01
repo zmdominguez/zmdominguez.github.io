@@ -94,4 +94,4 @@ There are a lot more information that affect a user's experience with the Woolwo
 All of these things may affect the app one way or another, and we use a Diagnostics screen to display all those information (for obvious reasons I cannot put a screenshot here).
 
 
-And with that we wrap up this post on our developer options for UI-affecting variables. 
+And with that we wrap up this post on our developer options for UI-affecting variables. In the next post, we will talk about logging, Toasts, and more fun stuff! :confetti_ball:
