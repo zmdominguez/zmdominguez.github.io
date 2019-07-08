@@ -62,22 +62,26 @@ When enabled, the app shows a persistent notification that serves as the shortcu
 
 When connected to our development computers, we have  a wide array of debugging tools at our disposal. We can use `Timber`, or `System.out`, or `Toast`s, or breakpoints, etc.
 
-But going back to our geofencing feature, all of these options are not really viable to us. Sure we can walk around Surry Hills with a laptop and keep an eye on Logcat whilst debugging. But we really can't expect everyone who is testing the app to do this.
+But going back to our geofencing feature, all of these options are not really viable to us during testing. Sure we can walk around Surry Hills with a laptop and keep an eye on Logcat whilst debugging. But we really can't expect everyone who is testing the app to do this.
 
 When this option is turned on, we send all the Logcat information from  our app into a text file:
 {% gist be341240af8e9637ac6ffd5605665cc4 save_logcat.kt %}
 
-(Note to self: Surely we can improve on the filename :thinking:)
+(Note to self: Make the filename more human readable! :thinking:)
 
-Those logs are pretty useless just sitting in the user's device, so we put in the option to send those files to us:
+Getting those logs out of a particular device can be fiddly, dealing with multiple OEMs and USB variations. And those logs are pretty useless just sitting there, so we put in the option to send those files to us:
 {% gist be341240af8e9637ac6ffd5605665cc4 send_files.kt %}
 
-This intent allows the sender the pick and choose which files to send out of everything in our debug file storage. 
+Using [`ACTION_SEND_MULTIPLE`](https://developer.android.com/training/sharing/send#send-multiple-content) with the Intent allows us to automatically attach all the log files we can find in the user's debug file storage. 
 
 <center><a href="https://imgur.com/VOIY4yq"><img src="https://i.imgur.com/VOIY4yq.png?1" title="source: imgur.com" /></a><br/>
 <small>Gimme those logs!</small></center>
 
-To be good citizens, we have also provided the option to clear all existing logs so that users can reclaim their space.
+Depending on the email client they choose to send the files with, they can remove or add more files as they please.
+
+To be good citizens, we have also provided the option to clear all existing logs so that users can reclaim their precious storage space.
 
 Out of all the debugging features that we have, this one is probably my favourite. :green_heart:
+
+And on that note, we end this part of the series. In the next post, we will look at how our developer settings help us work better with the designers in our team. Stay tuned! :radio:
 
