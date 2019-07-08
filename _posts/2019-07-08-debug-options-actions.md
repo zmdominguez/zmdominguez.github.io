@@ -44,7 +44,7 @@ This function lives in our `DebugExtensions` class:
 
 (In this case, `SettingsInteractor` takes care of exposing some of the debug options that our main source set needs access to.)
 
-Having a developer option toggle to control these mean we can turn them off when it gets too annoying, and we lower the risk of leaving a debugging Toast when we release to production as well.
+Having a developer option toggle to control this means we can turn the Toasts off when it gets too annoying, and we lower the risk of leaving a debugging Toast when we release to production as well.
 
 ### Enable Leak Canary
 
@@ -64,8 +64,6 @@ But going back to our geofencing feature, all of these options are not really vi
 
 When this option is turned on, we send all the Logcat information from  our app into a text file:
 {% gist be341240af8e9637ac6ffd5605665cc4 save_logcat.kt %}
-
-(Note to self: Make the filename more human readable! :thinking:)
 
 Getting those logs out of a particular device can be fiddly, dealing with multiple OEMs and USB variations. And those logs are pretty useless just sitting there, so we put in the option to send those files to us:
 {% gist be341240af8e9637ac6ffd5605665cc4 send_files.kt %}
