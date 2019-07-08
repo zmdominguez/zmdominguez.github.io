@@ -82,6 +82,7 @@ To be good citizens, we have also provided the option to clear all existing logs
 Out of all the debugging features that we have, this one is probably my favourite. :green_heart:
 
 (Massive thanks go out to [@ataul](https://twitter.com/ataulm) for all his patience reviewing my crazy ramblings :laughing: )
+
 ---
 
 In the next post, we will look at how our developer settings help us work better with the designers in our team. Stay tuned! :radio:
