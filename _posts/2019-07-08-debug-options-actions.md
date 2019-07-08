@@ -40,19 +40,17 @@ I previously talked about a geofencing feature we had to implement, and we have 
 In this feature, we want the app to notify the user when they enter a geofence. Testing geofences in the middle of the city can be tricky, and having visual cues that let us know if we have entered or exited a geofence has been super helpful for us.
 
 This function lives in our `DebugExtensions` class:
-```kotlin
-fun showDebugToast(context: Context, message: String, sharedPrefs: SharedPreferences) {
-    if (sharedPrefs.getBoolean(getString(R.string.debug_show_toasts), false)) {
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
-    }
-}
-```
+{% gist 3b4047bd17f3bceda4e7b9bf70c9994c debug_toast.kt %}
+
+(In this case, `SettingsInteractor` takes care of exposing some of the debug options that our main source set needs access to.)
 
 Having a developer option toggle to control these mean we can turn them off when it gets too annoying, and we lower the risk of leaving a debugging Toast when we release to production as well.
 
 ### Enable Leak Canary
 
 We have some really old Activities in the app that drive [Leak Canary](https://github.com/square/leakcanary) crazy. Until we get around to cleaning them up, it also drives our QAs crazy. This toggle gives them the power to turn the tool off so they can test in peace.
+
+As a rule, developers keep this toggle on during active development. As for those old Activities, we are in the process of reworking them to make them perform better.
 
 ### Show Debug Notification
 
@@ -83,5 +81,7 @@ To be good citizens, we have also provided the option to clear all existing logs
 
 Out of all the debugging features that we have, this one is probably my favourite. :green_heart:
 
-And on that note, we end this part of the series. In the next post, we will look at how our developer settings help us work better with the designers in our team. Stay tuned! :radio:
+---
+
+In the next post, we will look at how our developer settings help us work better with the designers in our team. Stay tuned! :radio:
 
