@@ -20,7 +20,7 @@ Read the other posts in this series:
 
 ---
 
-As I mentioned in [part II](2019-06-24-debug-options-timber.md), we leverage Timber a lot. Those stacktrace log screens have been really useful when the app misbehaves, but what about those times when we just want to have checkpoints whilst using the app?
+As I mentioned in [part II](https://zarah.dev/2019/06/24/debug-options-timber.html), we leverage Timber a lot. Those stacktrace log screens have been really useful when the app misbehaves, but what about those times when we just want to have checkpoints whilst using the app?
 
 Enter our next set of developer options:
 <center><a href="https://imgur.com/asPf70G"><img src="https://i.imgur.com/asPf70G.png" title="source: imgur.com" /></a><br />
