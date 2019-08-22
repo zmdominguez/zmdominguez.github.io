@@ -40,6 +40,8 @@ For us, switching environments mean revoking access tokens and everything else t
 
 Your testers are users too, so UX is important. :wink:
 
+:hand: EDIT (AUG 2019): A bunch of people have *EMAILED* me just to "well, actually" me about the restart bit in these screenshots. We are well aware of the Jake's Phoenix library but it is not applicable for this use case. Thank you, you can stop emailing me now.
+
 ### Inspect and Reset Preferences
 
 Last year, Woolworths have completely [removed single-use plastic bags](https://www.woolworthsgroup.com.au/page/media/Latest_News/single-use-plastic-shopping-bags-gone-for-good-at-woolworths) from all stores nationwide. To help with the transition to reusable bags, we built a feature into the app that allows users to enable bag reminders for their chosen store. We also included a "nudge" feature to assist with discovery -- the app would nudge you three times to set up your reminders, after which it assumes you do not want to set it up.
