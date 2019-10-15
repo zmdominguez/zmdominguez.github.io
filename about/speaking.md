@@ -1,6 +1,9 @@
 I give talks about development in general and about Android in particular. I also organise a number of events mainly in Sydney, Australia.
 
 ## Speaking
+Supercharging Your Debug Builds (Kotlin/Everywhere Wellington 2019) [[Slides](https://docs.google.com/presentation/d/1_Zrshfy1Zy-9LNMCChdV6-0w8eWRvf0VnQ93d8oW_bY/present?usp=sharing)]  
+<span style="font-size:small">30 August 2019, Wellington, New Zealand</span>
+
 Twelve Years On: A Retrospective (Mobile Refresh 2018) [[Slides](https://docs.google.com/presentation/d/1wnYWzS3z-ZZP0nDwA6p_PRi62BR9BnPO3-lNUoKVPMk/present?slide=id.p)]  
 <span style="font-size:small">07 September 2018, Wellington, New Zealand</span>
 
