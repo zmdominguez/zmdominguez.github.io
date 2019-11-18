@@ -1,5 +1,10 @@
 I give talks about development in general and about Android in particular. I also organise a number of events mainly in Sydney, Australia.
 
+## Features
+[Android Dev Summit 2019](https://youtu.be/ZKbuqDbk-0c)  
+[Android Dev Summit 2019 Community Video](https://youtu.be/Hsu5f_Ie3sc)   
+[Google I/O 2018](https://youtu.be/eHjHlujp3Tg)  
+
 ## Speaking
 Supercharging Your Debug Builds (Kotlin/Everywhere Wellington 2019) [[Slides](https://docs.google.com/presentation/d/1_Zrshfy1Zy-9LNMCChdV6-0w8eWRvf0VnQ93d8oW_bY/present?usp=sharing)]  
 <span style="font-size:small">30 August 2019, Wellington, New Zealand</span>
@@ -36,6 +41,10 @@ YOW! Connected 2016 [[Slides](https://docs.google.com/presentation/d/1L6kxqdaUS7
 <span style="font-size:small">06 October 2016, Melbourne, Australia</span>
 
 ## Interviews
+Android Developer Backstage [[Blog](http://androidbackstage.blogspot.com/2019/10/episode-125-adb-live-at-android-dev.html)|[Audio](https://storage.googleapis.com/androiddevelopers/android_developers_backstage/ADB%20125%20ADB%20Live.mp3) | 
+[Video](https://youtu.be/NGkCCMiVp90)]  
+Living By the Code [(Book)](https://store.raywenderlich.com/products/living-by-the-code)
+
 Android Dialogs: [Instant Apps](https://www.youtube.com/watch?v=scf-ewzDwck)  
 Fragmented: [Make your apps instant](http://fragmentedpodcast.com/episodes/90/)  
 Material Podcast: [Episode 91](https://www.relay.fm/material/91)  
@@ -43,7 +52,11 @@ Material Podcast: [Episode 70](https://www.relay.fm/material/70)
 Fragmented: [Google I/O 2016](http://fragmentedpodcast.com/episodes/43/)
 
 ## Organising
-[DevFest Sydney 2018](http://devfest.org.au/)  
+[DevFest Sydney 2019](http://devfest.org.au/)  
+[DevFest Sydney 2018](http://2018.devfest.org.au/)  
 [DevFest Sydney 2017](http://2017.devfest.org.au/)  
 [DevFest Sydney 2016](http://2016.devfest.org.au/)  
 [DevFest Sydney 2015](http://2015.devfest.org.au/)  
+
+## Other Writing
+[Domain Tech Blog](https://goo.gl/NLfdQE)
