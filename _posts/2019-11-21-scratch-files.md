@@ -6,7 +6,7 @@ tags:
 - tools
 ---
 
-One of the most useful things for me whilst I was learning Kotlin was https://try.kotlinlang.org/. It gave me a quick way to test concepts, try new APIs, or just to get familiar with the syntax.
+One of the most useful things for me whilst I was learning Kotlin was [TryKotlin](https://try.kotlinlang.org/). It gave me a quick way to test concepts, try new APIs, or just to get familiar with the syntax.
 
 Sometimes though I want to see if something would work with my own data classes, and it's a bit too much trying to cram them all into that page. Other times I don't want to use my own app either, cause that means adding logs or `TextView`s then recompiling and rerunning the whole app just to see if something would work as I expect it to.
 
