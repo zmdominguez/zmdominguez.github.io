@@ -9,9 +9,7 @@ I have always believed that one of the biggest factors that influence a person's
 
 It is for this reason that I have [written](https://zarah.dev/2016/02/05/squashing-bugs.html) and [spoken](https://www.youtube.com/watch?v=gjHY7jl4rrA) about making the most out of Android Studio a few times over the past few years.
 
-I have talked about the debugging tools within Android Studio and how we can better utilise breakpoints. Today, I'm hammering the point in even more with described breakpoints!
-
-I have lost count of how many times I stopped in the middle of a debugging session only to find myself drowning in breakpoints. I have put in so many that I have lost track of which breakpoint does what, or why I even put a breakpoint on a particular line in the first place.
+For instance, I have lost count of how many times I stopped in the middle of a debugging session only to find myself drowning in breakpoints. I have put in so many that I have lost track of which breakpoint does what, or why I even put a breakpoint on a particular line in the first place.
 
 <center>
     <a href="https://imgur.com/vmkOFZm"><img src="https://i.imgur.com/vmkOFZm.png" title="source: imgur.com" /></a>
