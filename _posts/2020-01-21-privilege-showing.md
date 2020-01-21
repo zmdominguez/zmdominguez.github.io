@@ -27,6 +27,6 @@ Don't even get me started on how I get treated when I land in the country I'm vi
 
 Anyway, what I am trying to say is that the past couple of days suck because of something I keep on seeing on Twitter. People have been posting all the countries they have been to, and all the others on their bucket list.
 
-I mean good for all those people but I wonder if they are aware of how PRIVILEGED they are. I wonder if they have ever experienced the amount of suffering and humiliation that I had to go through to get visas. I wonder if they have ever been looked down upon because of the country they were born in, or the passport they are holding. I wonder how aware they are that there are SO MANY people out there who have the same aspirations and the same bucket lists as they do, but have resigned themselves to the fact that it will just be that -- a bucket list.
+I mean good for all those people but maybe we all should do our part in checking our privilege. I couldn't have imagined the amount of suffering and humiliation that I had to go through to get visas. I have lost count of how many times I have been looked down upon because of the country I was born in, or the passport I am holding. I know that there are SO MANY people out there who have the same aspirations and the same bucket lists as those we see in the meme, but have resigned themselves to the fact that it will just be that -- a bucket list. Heck, I am one of those! So maybe it would be great if we all take pause from time to time and check our privilege.
 
-Or maybe I'm just jealous.
+Then again, maybe I'm just jealous.
