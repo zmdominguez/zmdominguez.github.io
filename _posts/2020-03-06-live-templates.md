@@ -70,3 +70,14 @@ And here's our brand new template in action:
     <a href="https://imgur.com/LjaiHU5"><img src="https://i.imgur.com/LjaiHU5.gif" title="source: imgur.com" /></a>
     <br /> <small>Custom template in action</small>
 </center>
+
+### Filtering `TODO`s
+At the start of this post I mentioned that we do periodic checks on our `TODO`s. When I look at our `TODO` panel (`View` > `Tool Windows` > `TODO`), there are hundreds of them across *so many* files. Before a release, we review all the templated ones so we can follow up with the devs who left the comments.
+
+To make this task easier, we created a `TODO` filter:
+<center>
+    <a href="https://imgur.com/QtOh8qv"><img src="https://i.imgur.com/QtOh8qv.png" title="source: imgur.com" /></a>
+    <br /> <small>TODO filters</small>
+</center>
+
+Unfortunately the results of this search is not exportable, so if we want to generate a report we need to run code analysis (`Analyze` > `Run inspection by name`) and choose `TODO`. *This* can be exported to either HTML or XML which makes it easier to share with the team.
