@@ -69,7 +69,7 @@ Turned into a photo:
     <a href="https://imgur.com/rsALySp"><img src="https://i.imgur.com/rsALySp.jpg" title="source: imgur.com" /></a>
 </center>
 
-The `"implied origin at (0,0)"` the Javadoc refers to is the leftmost edge of the baseline and the values in our `textBounds` are relative to this point (In contrast to the `Canvas` where `(0, 0)` is the top-left). Since our text is all caps, the `bottom` coordinate of our bounding box aligns with the baseline (how convenient). Values in `textBounds` **increase** as you go down and to the right of the origin, and **decrease** as you go the opposite way.
+The `"implied origin at (0,0)"` the Javadoc refers to is the bottom-leftmost corner of the baseline and the values in our `textBounds` are relative to this point (not to be confused with the `Canvas` where `(0, 0)` is the top-leftmost corner). Since our text is all caps, the `bottom` coordinate of our bounding box aligns with the baseline (how convenient). Values in `textBounds` **increase** as you go down and to the right of the origin, and **decrease** as you go the opposite way.
 
 <center>
     <a href="https://imgur.com/2Afeqaf"><img src="https://i.imgur.com/2Afeqaf.jpg" title="source: imgur.com" /></a>
@@ -104,7 +104,7 @@ Now that we have enough information about how far down from the baseline our des
 
 In our specific case, given our custom font and the font size, we came up with this formula:
 ```kotlin
-val textY = ((bottomOfBg - textBounds.height()) / 2F) + // distance from top of the bg to top of text
+val textY = ((bottomOfBg - textBounds.height()) / 2F) + // half of remaining space in the bg unoccupied by text
     (0F - textBounds.top) + // distance from top of text to baseline of text
     (textBounds.bottom / 2F) // half of "tails"
 ```
