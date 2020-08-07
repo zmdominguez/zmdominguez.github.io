@@ -72,13 +72,13 @@ Turned into a photo:
 The `"implied origin at (0,0)"` the Javadoc refers to is the leftmost edge of the baseline and the values in our `textBounds` are relative to this point (In contrast to the `Canvas` where `(0, 0)` is the top-left). Since our text is all caps, the `bottom` coordinate of our bounding box aligns with the baseline (how convenient). Values in `textBounds` **increase** as you go down and to the right of the origin, and **decrease** as you go the opposite way.
 
 <center>
-    <a href="https://imgur.com/T65MifE"><img src="https://i.imgur.com/T65MifE.jpg" title="source: imgur.com" /></a>
+    <a href="https://imgur.com/2Afeqaf"><img src="https://i.imgur.com/2Afeqaf.jpg" title="source: imgur.com" /></a>
     <br /><small>Convenience</small>
 </center>
 
 It is important to note here that the text _may not be_ drawn exactly over the origin -- there _may be_ a leading space between the first letter and the leftmost edge of our bounding box. (I don't know enough about typography but from my experiments it looks like this depends on how the font renders each letter).
 
-This is all fine and good, but what if we give it "`Something`" else? We now have a mix of lower- and uppercase letters, as well as letters with _ascenders_ (things that go up) and _descenders_ (things that go down -- but in my head I call them tails).
+Displaying `NEW` is all fine and good, but what if we give it "`Something`" else? We now have a mix of lower- and uppercase letters, as well as letters with _ascenders_ (things that go up) and _descenders_ (things that go down -- but in my head I call them tails).
 
 With the same custom font and size, our `textBounds` now look like this:
 ```
@@ -92,17 +92,29 @@ Rect(
 
 Turned into a photo:
 <center>
-    <a href="https://imgur.com/inOazdv"><img src="https://i.imgur.com/inOazdv.jpg" title="source: imgur.com" /></a>
+    <a href="https://imgur.com/o5lVaVE"><img src="https://i.imgur.com/o5lVaVE.jpg" title="source: imgur.com" /></a>
 </center>
 
-Now that we have enough information about how far down from the baseline our descent line is and how far up from the baseline our ascent line is (look at us using typography terms! Go us!), we can do the necessary maths to tell Android where exactly we want our text to be drawn.
+Now that we have enough information about how far down from the baseline our descent line is and how far up from the baseline our ascent line is (look at us using typography terms! Go us!), we can do the necessary maths to tell Android where exactly we want our text to be drawn with respect to the `Canvas`.
 
 <center>
     <a href="https://imgur.com/UQpYzeq"><img src="https://i.imgur.com/UQpYzeq.jpg" title="source: imgur.com" /></a>
     <br /><small>Purple (0,0) is the Canvas origin<br />Green (0,0) is the text origin</small>
 </center>
 
-Note that `TextPaint` can also give you the full height of the bounding box, but if you want to know the precise vertical distances relative to the baseline, `getTextBounds()` can tell you that information.
+In our specific case, given our custom font and the font size, we came up with this formula:
+```kotlin
+val textY = ((bottomOfBg - textBounds.height()) / 2F) + // distance from top of the bg to top of text
+    (0F - textBounds.top) + // distance from top of text to baseline of text
+    (textBounds.bottom / 2F) // half of "tails"
+```
+Some notes:
+- `bottomOfBg` here is the bottom of the blue box in the image above
+- we decided to add `(textBounds.bottom / 2F)` to nudge the text even more to make it more visually pleasing (this is what works for us and the custom font we use, so your mileage might vary)
+
+Note that `textBounds` can also give you the full height of the bounding box, but if you want to know the precise vertical distances relative to the baseline, the contents of `getTextBounds()` can tell you that information.
 
 If you want to know more about Android typography, [here](https://proandroiddev.com/android-and-typography-101-5f06722dd611) is an excellent article about it.
 
+---
+Many many thanks to [Florina Muntenescu](https://medium.com/@florina.muntenescu), Mike Evans, Ataul Munim for the reviews!
