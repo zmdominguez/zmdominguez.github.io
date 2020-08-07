@@ -111,10 +111,9 @@ val textY = ((bottomOfBg - textBounds.height()) / 2F) + // distance from top of 
 Some notes:
 - `bottomOfBg` here is the bottom of the blue box in the image above
 - we decided to add `(textBounds.bottom / 2F)` to nudge the text even more to make it more visually pleasing (this is what works for us and the custom font we use, so your mileage might vary)
-
-Note that `textBounds` can also give you the full height of the bounding box, but if you want to know the precise vertical distances relative to the baseline, the contents of `getTextBounds()` can tell you that information.
+- `textBounds` can also give the full height of the bounding box, but if you want to know precise vertical distances relative to the baseline, that information is contained within `textBounds` itself
 
 If you want to know more about Android typography, [here](https://proandroiddev.com/android-and-typography-101-5f06722dd611) is an excellent article about it.
 
 ---
-Many many thanks to [Florina Muntenescu](https://medium.com/@florina.muntenescu), Mike Evans, Ataul Munim for the reviews!
+Many many thanks to [Florina Muntenescu](https://medium.com/@florina.muntenescu), [Mike Evans](https://twitter.com/m_evans10), Ataul Munim for the reviews!
