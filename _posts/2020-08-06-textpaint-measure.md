@@ -4,7 +4,7 @@ title: "Accurate Measurements With getTextBounds()"
 tags:
     - android
 ---
-We have a few custom [spans](https://developer.android.com/reference/android/text/style/package-summary) in our app and over the last few days I have been poring over one of them. I was trying to see if the implementation could be improved but before that could happen I needed to understand what it is trying to do first.
+We have a few custom [spans](https://developer.android.com/reference/android/text/style/package-summary) in our app and over the last few days I have been poring over one of them. I was trying to see if the implementation could be improved but before that could happen I needed to understand what it was trying to do first.
 
 This particular span, among other things, deals with drawing some text on a `Canvas`. We provide some styling information -- text size, the text colour, and font -- and in the process of drawing there's a lot of measurements and maths.
 <center>
@@ -116,7 +116,7 @@ val textY = ((bottomOfBg - textBounds.height()) / 2F) + // half of remaining spa
 
 <center>
     <a href="https://imgur.com/pO6mYGf"><img src="https://i.imgur.com/pO6mYGf.jpg" title="source: imgur.com" /></a>
-    <br /><small>Purple (0,0) is the Canvas origin<br />Green (0,0) is the text origin<br />Grey outline is `textBounds` for each word</small>
+    <br /><small>Purple (0,0) is the Canvas origin<br />Green (0,0) is the text origin<br />Grey outline is <tt>textBounds</tt> for each word</small>
 </center>
 
 Some notes:
@@ -127,4 +127,4 @@ Some notes:
 If you want to know more about Android typography, [here](https://proandroiddev.com/android-and-typography-101-5f06722dd611) is an excellent article about it.
 
 ---
-Many many thanks to [Florina Muntenescu](https://medium.com/@florina.muntenescu), [Mike Evans](https://twitter.com/m_evans10), Ataul Munim for the reviews!
+Many many thanks to [Ataul Munim](https://twitter.com/ataulm?lang=en), [Florina Muntenescu](https://medium.com/@florina.muntenescu), and [Mike Evans](https://twitter.com/m_evans10) for the reviews!
