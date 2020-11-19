@@ -122,7 +122,7 @@ class TodoDetector : Detector() {
 
 `Detector` is the base class of all detectors. It is marked as `@Beta`, so I added the `@Suppress` annotation there to confirm that yes, I know this might break.
 
-`Detector` is pretty generic, and we can get much more out of Lint if we can indicate what specific detector we need. There are a few specialised interfaces we can use depending on what type of thing we need to run our rule on:
+`Detector` is pretty generic (except for [`ResourceXmlDetector`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-master-dev:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/ResourceXmlDetector.java)), and we can get much more out of Lint if we can indicate what specific detector we need. There are a few specialised interfaces we can use depending on what type of thing we need to run our rule on:
 
 Type | Note
 --- | ---
@@ -144,7 +144,7 @@ class TodoDetector : Detector(), SourceCodeScanner {
 
 ### Being specific
 
-There is another term that most talk on Lint mention a lot, and that is "visit". I haven't seen an exact accurate definition of the term, but from what I gather this is what we call the act of Lint getting to a particular UAST node or PSI element.
+There is another term that most talks on Lint mention a lot, and that is "visit". I haven't seen an exact accurate definition of the term, but from what I gather this is what we call the act of Lint getting to a particular UAST node or PSI element.
 
 This means if we want to look at usages of a method for example, we need to "visit" methods and figure out if the issue exists there. If we want to write a rule that checks constraints in a layout file, then we probably need to "visit" XML attributes and values.
 
@@ -163,7 +163,7 @@ Next we need to specify what specific kind of UAST node we are looking for. Ther
 
 There is one caveat though -- if we look at the generated UAST for our sample file, `UComment` does not make an appearance at all! However, we _do_ see via PsiViewer that a [`PsiComment`](https://upsource.jetbrains.com/idea-ce/file/idea-ce-4682003011bb42ffdb872d081e79d300bb393d17/platform/core-api/src/com/intellij/psi/PsiComment.java) is present.
 
-If we traverse the UAST backwards, we eventually get to `UFile` which encompasses all the possible places that a comment can reside in. Perfect, let's go ahead and use that as the UAST type we care about.
+If we traverse the UAST backwards (upwards?), we eventually get to `UFile` which encompasses all the possible places that a comment can reside in. Perfect, let's go ahead and use that as the UAST type we care about.
 
 ```kotlin
 @Suppress("UnstableApiUsage")
@@ -205,7 +205,7 @@ It is _extremely_ important to double check that you are using the correct combi
 `get*` | `visit*` | Framework examples 
 ---|---|---
 `applicableAnnotations` | `visitAnnotationUsage` | [BanKeepAnnotation](https://cs.android.com/androidx/platform/frameworks/support/+/androidx-master-dev:lint-checks/src/main/java/androidx/build/lint/BanKeepAnnotation.kt) 
-`applicableSuperClasses` | `visitClass` | [OnClickDetector](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-master-dev:lint/libs/lint-check. s/src/main/java/com/android/tools/lint/checks/OnClickDetector.java)
+`applicableSuperClasses` | `visitClass` | [OnClickDetector](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-master-dev:lint/libs/lint-checks/src/main/java/com/android/tools/lint/checks/OnClickDetector.java)
 `getApplicableAsmNodeTypes` | `checkInstruction` | [FieldGetterDetector](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-master-dev:lint/libs/lint-checks/src/main/java/com/android/tools/lint/checks/FieldGetterDetector.java) 
 `getApplicableAttributes` | `visitAttribute` | [DuplicateIdDetector](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-master-dev:lint/libs/lint-checks/src/main/java/com/android/tools/lint/checks/DuplicateIdDetector.java) 
 `getApplicableCallNames` | `checkCall` | [LocaleDetector](https://cs.android.com/android/platform/superproject/+/master:tools/base/lint/libs/lint-checks/src/main/java/com/android/tools/lint/checks/LocaleDetector.java) 
@@ -253,11 +253,11 @@ override fun visitFile(node: UFile) {
 }
 ```
 
-This give you a string with the full UAST structure of the file being analysed.
+This gives you a string with the full UAST structure of the file being analysed.
 
 ### Finding fault
 
-Let's go ahead and implement the soul of our scanner:
+Now that we have a better understanding of what is going on, let's go ahead and implement the soul of our scanner:
 ```kotlin
 override fun visitFile(node: UFile) {
 
@@ -305,7 +305,7 @@ val ISSUE: Issue = Issue.create(
 )
 ```
 
-The last parameter required by `create` is an [`Implementation`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-master-dev:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/Implementation.java) that maps the issue being reported with the detector responsible for finding that issue. 
+The last parameter required by `Issue.create()` is an [`Implementation`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-master-dev:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/Implementation.java) that maps the issue being reported with the detector responsible for finding that issue. 
 
 An `Implementation` requires a [`Scope`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-master-dev:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/Scope.kt) -- which tells Lint what kind of files our implementation is interested in.
 
@@ -318,7 +318,7 @@ private val IMPLEMENTATION = Implementation(
 
 The naming is indeed misleading but `JAVA_FILE_SCOPE` means both Java and Kotlin files will be considered for our rule when running Lint.
 
-This means at this point in our implementation it is absolutely critical that these information need to be compatible: 
+This means at this point in our implementation it is absolutely critical that these information need to be compatible:  
 :white_check_mark: the interface we are implementing for our detector  
 :white_check_mark: the overridden `getApplicable*` method  
 :white_check_mark: the overridden `visit*` method  
@@ -368,7 +368,7 @@ And where to put the red squiggly lines in the Lint report:
     <a href="https://imgur.com/lHrTC8w"><img src="https://i.imgur.com/lHrTC8w.png" title="source: imgur.com" /></a>
 </center>
 
-For this rule, let's highlight the full comment. We can now finish up our `reportUsage` method:
+For this rule, it's good enought for me to highlight the full comment. We can now finish up our `reportUsage` method:
 
 ```kotlin
 private fun reportUsage(
