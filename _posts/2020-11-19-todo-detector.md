@@ -13,7 +13,7 @@ A few months ago, my team came upon an agreement that when leaving a TODO anywhe
 
 I created a [live template](https://zarah.dev/2020/03/06/live-templates.html) to support adherence to this rule, but why not go one step further and integrate the rule into our daily workflow?
 
-In this post, we build upon the [foundations we have started]().
+In this post, we build upon the [foundations we have started](https://zarah.dev/2020/11/18/todo-lint.html).
 
 ---
 
@@ -83,8 +83,7 @@ open class CustomTypefaceSpan(private val font: Typeface?) : MetricAffectingSpan
 PSI, or **P**rogram **S**tructure **I**nterface, is [traditionally used by IntelliJ]( https://jetbrains.org/intellij/sdk/docs/basics/architectural_overview/psi.html) to model source files via _elements_. The [PsiViewer plugin](https://plugins.jetbrains.com/plugin/227-psiviewer) is really useful in helping you visualise what this means.
 
 <center>
-    <a href="https://i.imgur.com/afmzE8K"><img src="https://i.imgur.com/afmzE8K.gif" title="source: imgur.com" /></a>
-    <br /> <small>Exploring the PSI</small>
+    <iframe class="imgur-embed" width="100%" height="500" frameborder="0" src="https://i.imgur.com/afmzE8K.gifv#embed"></iframe>
 </center>
 
 I like to think of PSI as the blueprint of the file. It shows each and every single element, including whitespaces and braces (it can even tell you if it's a left brace or a right brace!)
