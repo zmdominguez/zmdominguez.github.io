@@ -19,7 +19,7 @@ In this post, we build upon the [foundations we have started](https://zarah.dev/
 
 Now that we have our module set up, we can start writing our detector.
 
-As [mentioned previously](), detectors do the heavy lifting for our custom rule. To do so, it has to fulfil several roles:
+As [mentioned previously](https://zarah.dev/2020/11/18/todo-lint.html), detectors do the heavy lifting for our custom rule. To do so, it has to fulfil several roles:
 - Look for the relevant locations
 - Find issues, if any, in those locations
 - Report back any found issues to the user
@@ -289,7 +289,7 @@ And if it does not, report this as an issue.
 
 When we find a comment that violates the contract, we want to give our users a clear definition of what went wrong and how to fix the issue. 
 
-Remember the anatomy of an issue we talked about in the previous post? Let's use that knowledge to define our issue:
+Remember the anatomy of an issue we talked about [in the previous post](https://zarah.dev/2020/11/18/todo-lint.html)? Let's use that knowledge to define our issue:
 ```kotlin
 val ISSUE: Issue = Issue.create(
     id = "UnassignedTodo",
