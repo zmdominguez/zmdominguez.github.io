@@ -82,10 +82,6 @@ open class CustomTypefaceSpan(private val font: Typeface?) : MetricAffectingSpan
 
 PSI, or **P**rogram **S**tructure **I**nterface, is [traditionally used by IntelliJ]( https://jetbrains.org/intellij/sdk/docs/basics/architectural_overview/psi.html) to model source files via _elements_. The [PsiViewer plugin](https://plugins.jetbrains.com/plugin/227-psiviewer) is really useful in helping you visualise what this means.
 
-<center>
-    <iframe frameborder="0" src="https://i.imgur.com/afmzE8K.gifv#embed"></iframe>
-</center>
-
 I like to think of PSI as the blueprint of the file. It shows each and every single element, including whitespaces and braces (it can even tell you if it's a left brace or a right brace!)
 
 <center>
