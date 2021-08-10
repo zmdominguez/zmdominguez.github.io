@@ -18,7 +18,7 @@ All I remember is that I was in _that_ branch but I don't remember the name nor 
 
 The reflog enumerates anything that happens within git. It shows information about references, any commands that have been run, or where `HEAD` is pointing to, among others.
 <center>
-    <a href="https://imgur.com/aQ6YRPb"><img src="https://imgur.com/aQ6YRPb" title="Sample reflog output" /></a> <br />
+    <a href="https://imgur.com/aQ6YRPb"><img src="https://imgur.com/aQ6YRPb.png" title="Sample reflog output" /></a> <br />
     <small>A sample reflog output</small>
 </center>
 
@@ -41,8 +41,9 @@ Let's break it down:
 - `head -n 5`: limits the output to five lines
 
 Running this command gives back:
+
 <center>
-    <a href="https://imgur.com/Yu5xa1Y"><img src="https://imgur.com/Yu5xa1Y" title="A list of last checked out branches" /></a> <br />
+    <a href="https://imgur.com/Yu5xa1Y"><img src="https://imgur.com/Yu5xa1Y.png" width="682" title="A list of last checked out branches" /></a> <br />
     <small>Convenience!</small>
 </center>
 
