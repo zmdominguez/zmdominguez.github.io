@@ -16,20 +16,20 @@ That's cool and all, but what I realised is that most of the time, aside from th
 
 All I remember is that I was in _that_ branch but I don't remember the name nor what number I should put in the braces. About 98% of the time, I ended up consulting the [`reflog`](https://git-scm.com/docs/git-reflog) to figure out this information.
 
-The reflog enumerate basically anything that happens within git. It shows information about references, any commands that have been run, or where `HEAD` is pointing to, among others.
+The reflog enumerates anything that happens within git. It shows information about references, any commands that have been run, or where `HEAD` is pointing to, among others.
 <center>
     <a href="https://imgur.com/aQ6YRPb"><img src="https://imgur.com/aQ6YRPb" title="Sample reflog output" /></a> <br />
     <small>A sample reflog output</small>
 </center>
 
-What we are looking for are lines similar to this one:
+That's a _lot_ of information, but what we are looking for are lines similar to this one:
 ```zsh
 1e8a561 (origin/main, main) HEAD@{10}: checkout: moving from main to task/lint-gradle
 ```
 
-From here I can use the branch name and go back to that branch if I want to. However, the reflog has a _lot_ of information. Sometimes I'm just interested in finding out the branch name for checking things out and not in all the other details.
+From here I can use the branch name and go back to that branch if I want to. Scanning all info spewed by reflog can be overwhelming; sometimes I'm just interested in finding out the branch name for checking things out and not in all the other details.
 
-After some furious Googling and trial and error, I ended up with this:
+After some furious Googling and some trial and error, I ended up with this:
 ```zsh
 git reflog | egrep -io "moving from ([^[:space:]]+)" | awk '{ print NR " - " $3 }' | head -n 5'
 ```
@@ -46,12 +46,10 @@ Running this command gives back:
     <small>Convenience!</small>
 </center>
 
-The numbers on the left match the number I can use for checking out, i.e.:
+The numbers on the left match the number I can use for checking out. For example, if I want to go back to `feature/package-rename`:
 ```zsh
 gco @{-4}
 ```
-
-will checkout `feature/package-rename`.
 
 Since I'm interested in using the numbers, I don't care if some branch names appear multiple times in the list. To remove duplicates, add this command after the `egrep`:
 ```zsh
