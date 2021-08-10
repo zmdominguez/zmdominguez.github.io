@@ -43,7 +43,7 @@ Let's break it down:
 Running this command gives back:
 
 <center>
-    <a href="https://imgur.com/Yu5xa1Y"><img src="https://imgur.com/Yu5xa1Y.png" width="682" title="A list of last checked out branches" /></a> <br />
+    <a href="https://imgur.com/ZTvJK1c"><img src="https://i.imgur.com/ZTvJK1c.png" width="682" title="A list of last checked out branches" /></a> <br />
     <small>Convenience!</small>
 </center>
 
