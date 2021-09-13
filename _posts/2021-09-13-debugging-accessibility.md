@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Debugging Accessibility 🔍"
+title: "Seeing What Talkback Sees 🔍"
 tags:
     - a11y, accessibility
 ---
