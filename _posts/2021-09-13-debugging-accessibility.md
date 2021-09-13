@@ -11,7 +11,7 @@ There's a lot of resources that tell me what I should do, but what I found sorel
 
 For example, this is the upper part of my app's homepage.
 <center>
-    <a href="https://imgur.com/xvM4iA2"><img src="https://i.imgur.com/xvM4iA2.png" title="Partial screenshot with a cart icon highlighted" /></a>
+    <a href="https://imgur.com/xvM4iA2"><img src="https://i.imgur.com/xvM4iA2.png" title="Partial screenshot with a cart icon highlighted" width="256" /></a>
     <small>Talkback says "2 items in cart"</small>
 </center>
 
@@ -42,7 +42,7 @@ Some things have changed in Android and in Talkback a bit since Midori's post, b
 We can now trigger a dump of the node tree on any screen by using the gesture we have set in Talkback.
 
 <center>
-    <a href="https://imgur.com/XUMTJdg"><img src="https://i.imgur.com/XUMTJdg.png" title="Screenshot showing Talkback debugging gesture" /></a>
+    <a href="https://imgur.com/XUMTJdg"><img src="https://i.imgur.com/XUMTJdg.png" title="Screenshot showing Talkback debugging gesture" width="256"/></a>
     <small>Talkback will tell you it has been done</small>
 </center>
 
@@ -103,7 +103,7 @@ I guess I still don't have a definitive answer, but setting `android:importantFo
 
 I hope that as more and more people become a11y allies that we also get more attention on a11y tooling, and more technical articles focused on supporting a11y beyond the basics. For instance, did you know that we can change what Talkback says to provide more context on actionable content? For example, when selecting this `ViewGroup`:
 <center>
-    <a href="https://imgur.com/AjZ6aIk"><img src="https://i.imgur.com/AjZ6aIk.png" title="Partial screenshot with highlight" /></a>
+    <a href="https://imgur.com/AjZ6aIk"><img src="https://i.imgur.com/AjZ6aIk.png" title="Partial screenshot with highlight" width="256" /></a>
     <small>Double-tapping will bring the user to the edit store or delivery address screen</small>
 </center>
 Talkback will announce "Double-tap to change" instead of the default "Double-tap to activate". The former gives the user more context about what is expected to happen when they interact with the element. Come to think of it, that's a good idea for our next a11y post! :ok_hand:
