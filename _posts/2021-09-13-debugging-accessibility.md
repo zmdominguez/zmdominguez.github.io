@@ -15,7 +15,7 @@ For example, this is the upper part of my app's homepage.
     <small>Talkback says "2 items in cart"</small>
 </center>
 
-When the cart action menu item is focused, we expect Talkback to announce how many items are currently in the cart. However I noticed that sometimes Talkback just out of the blue says the number and just the number. Weird!
+When the cart action menu item is focused, we expect Talkback to announce how many items are currently in the cart. However I noticed that sometimes Talkback just out of the blue says the number (and just the number) after announcing "2 items in cart". Weird!
 
 If only I could dive into what Talkback "sees" so I could figure out how to fix the problem and make our Talkback announcements less confusing. I haven't found any mention of how to do this in the official Android docs, and it is by sheer luck that I stumbled [upon this :sparkles: amazing :sparkles: article](https://withintent.uncorkedstudios.com/tutorial-debugging-android-accessibility-818cfd361414) by [Midori Bowen](https://medium.com/@midori.bowen) from 2018(!).
 
@@ -25,19 +25,19 @@ It turns out that deep in the bowels of Talkback's developer settings is an opti
 
 <center>
     <a href="https://imgur.com/1g9EfIG"><img src="https://i.imgur.com/1g9EfIG.png" title="Screenshot of a screen showing a grid of items" width="256"/></a>
-    <small>Turn it on! (While you're there, turn on "Display speech output" as well if you prefer. This will put up a `Toast` of the Talkback announcements)</small>
+    <small>Turn it on! (While you're there, turn on "Display speech output" as well if you prefer. This will put up a <code>Toast</code> of the Talkback announcements)</small>
 </center>
 
 The "node tree" being referred to here is basically how Talkback interprets your view hierarchy. Having visibility on this would surely give us a lot of insight into what is going on under the hood.
 
-Some things have changed in Android and in Talkback a bit since Midori's post, but in general the steps in there should give you an idea of how to enable logging. For instance, instead of looking for "Unassigned", assignable gestures are now subtitled "Tap to assign". On some devices, Talkback allows multi-finger gestures, so there's a lot of options to use to trigger node tree log dumps.
+[Follow the steps](https://withintent.uncorkedstudios.com/tutorial-debugging-android-accessibility-818cfd361414) outlined in the OG post to enable node tree debugging. Some things have changed in Android and in Talkback since Midori's post, but in general the steps in there should give you an idea of how to enable logging. For instance, instead of looking for "Unassigned", assignable gestures are now subtitled "Tap to assign". On some devices, Talkback allows multi-finger gestures, so there's a lot of options to use to trigger node tree log dumps. If a gesture already has an action, you can still overwrite it if you wish to do so.
 
 <center>
     <a href="https://imgur.com/ZyblUEq"><img src="https://i.imgur.com/ZyblUEq.png" title="Screenshots showing how to change Talkback gestures" width="520"/></a>
     <small>I settled on "Tap with 3 fingers"</small>
 </center>
 
-### What can we learn? :thinking:
+### What do we have here? :thinking:
 
 We can now trigger a dump of the node tree on any screen by using the gesture we have set in Talkback.
 
