@@ -62,9 +62,9 @@ Content | Notes
 `(1100966)`|The node's hashcode (which the [Talkback source code](https://github.com/google/talkback/blob/f5d564fdc915a74d8cde4868608f307de9ccf957/utils/src/main/java/com/google/android/accessibility/utils/TreeDebug.java#L75) refers to as a "poor man's ID")
 `652`|The window ID
 `Switch`|The node's class name (usually type of widget)
-`invisible`|This is not shown in logs but is appended only if the view is invisible
-`(668, 225 - 800, 357)`|Coordinates of the view on the screen, (Left, Top - Right, Bottom)
-`TEXT{xxx}`|Text that's visible to the user (this `Switch` is unlabeled so this does not appear in the logs)
+`invisible`|This is not shown in this particular line -- it is appended only if the view is invisible
+`(668, 225 - 800, 357)`|Coordinates of the view on the screen, `(Left, Top - Right, Bottom)`
+`TEXT{xxx}`|Text that's visible to the user (this `Switch` is unlabeled so this does not appear in this line)
 `CONTENT{See only Specials}`|The content description provided by the widget
 `STATE{OFF}`|If a widget is stateful, such as this `Switch`, the current state
 `(action:FOCUS/A11Y_FOCUS/CLICK)`|Actions available on the node, as defined by [`AccessibilityNodeInfoCompat`](AccessibilityNodeInfoCompat)
@@ -108,4 +108,4 @@ I hope that as more and more people become a11y allies that we also get more att
     <a href="https://imgur.com/AjZ6aIk"><img src="https://i.imgur.com/AjZ6aIk.png" title="Partial screenshot with highlight" width="320" /></a>
     <small>Double-tapping will bring the user to the edit store or delivery address screen</small>
 </center>
-Talkback will announce "Double-tap to change" instead of the default "Double-tap to activate". The former gives the user more context about what is expected to happen when they interact with the element. Come to think of it, that's a good idea for our next a11y post! :ok_hand:
+Talkback will announce "Double-tap to change" instead of the default "Double-tap to activate". The former gives the user more context about what is expected to happen when they interact with the element. Come to think of it, that's a good idea for our next a11y post! See you then! :ok_hand:
