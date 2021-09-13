@@ -11,7 +11,7 @@ There's a lot of resources that tell me what I should do, but what I found sorel
 
 For example, this is the upper part of my app's homepage.
 <center>
-    <a href="https://imgur.com/xvM4iA2"><img src="https://i.imgur.com/xvM4iA2.png" title="Partial screenshot with a cart icon highlighted" width="256" /></a>
+    <a href="https://imgur.com/xvM4iA2"><img src="https://i.imgur.com/xvM4iA2.png" title="Partial screenshot with a cart icon highlighted" width="320" /></a>
     <small>Talkback says "2 items in cart"</small>
 </center>
 
@@ -24,7 +24,7 @@ If only I could dive into what Talkback "sees" so I could figure out how to fix 
 It turns out that deep in the bowels of Talkback's developer settings is an option to "Enable node tree debugging". Midori links to the Android documentation on enabling this setting but that page has since been deleted. :crying_cat_face:
 
 <center>
-    <a href="https://imgur.com/1g9EfIG"><img src="https://i.imgur.com/1g9EfIG.png" title="Screenshot of a screen showing a grid of items" width="256"/></a>
+    <a href="https://imgur.com/1g9EfIG"><img src="https://i.imgur.com/1g9EfIG.png" title="Screenshot of a screen showing a grid of items" width="320"/></a>
     <small>Turn it on! (While you're there, turn on "Display speech output" as well if you prefer. This will put up a <code>Toast</code> of the Talkback announcements)</small>
 </center>
 
@@ -42,7 +42,7 @@ The "node tree" being referred to here is basically how Talkback interprets your
 We can now trigger a dump of the node tree on any screen by using the gesture we have set in Talkback.
 
 <center>
-    <a href="https://imgur.com/XUMTJdg"><img src="https://i.imgur.com/XUMTJdg.png" title="Screenshot showing Talkback debugging gesture" width="256"/></a>
+    <a href="https://imgur.com/XUMTJdg"><img src="https://i.imgur.com/XUMTJdg.png" title="Screenshot showing Talkback debugging gesture" width="320"/></a>
     <small>Talkback will tell you it has been done</small>
 </center>
 
@@ -103,7 +103,7 @@ I guess I still don't have a definitive answer, but setting `android:importantFo
 
 I hope that as more and more people become a11y allies that we also get more attention on a11y tooling, and more technical articles focused on supporting a11y beyond the basics. For instance, did you know that we can change what Talkback says to provide more context on actionable content? For example, when selecting this `ViewGroup`:
 <center>
-    <a href="https://imgur.com/AjZ6aIk"><img src="https://i.imgur.com/AjZ6aIk.png" title="Partial screenshot with highlight" width="256" /></a>
+    <a href="https://imgur.com/AjZ6aIk"><img src="https://i.imgur.com/AjZ6aIk.png" title="Partial screenshot with highlight" width="320" /></a>
     <small>Double-tapping will bring the user to the edit store or delivery address screen</small>
 </center>
 Talkback will announce "Double-tap to change" instead of the default "Double-tap to activate". The former gives the user more context about what is expected to happen when they interact with the element. Come to think of it, that's a good idea for our next a11y post! :ok_hand:
