@@ -56,7 +56,7 @@ The first few lines (lines 2-9) pertain to the status bar stuff, so let's just i
 (1100966)652.Switch:(668, 225 - 800, 357):CONTENT{See only Specials}:STATE{OFF}:not checked(action:FOCUS/A11Y_FOCUS/CLICK):focusable:clickable
 ```
 
-Content |
+Content | Notes
 --- | ---
 `(1100966)`|The node's hashcode (which the [Talkback source code](https://github.com/google/talkback/blob/f5d564fdc915a74d8cde4868608f307de9ccf957/utils/src/main/java/com/google/android/accessibility/utils/TreeDebug.java#L75) refers to as a "poor man's ID")
 `652`|The window ID
@@ -75,7 +75,7 @@ The screen _is_ actually a `RecyclerView`, so let's also take a look at what inf
 
 At the end of:
 
-Line|
+Line| Notes
 --|---
 1| The `RecyclerView` node itself, we see `:collection:R10C2`. This indicates that this is a collection of views consisting of 10 rows, with two columns in each row. Talkback will announce the collection information the first time an item in the collection is selected. For example, if we tap on the Caramello Koala tile, Talkback will announce all the product information (based on the content description of the `ViewGroup`) plus the location of the tile and the collection information ("Row 1, Column 2, In grid, 10 rows, 2 columns").
 2|The item on the top right, we see `:item#r0c0`. This is the row- and column-index (starting at 0) of the item relative to the list.
