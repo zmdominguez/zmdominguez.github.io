@@ -49,6 +49,7 @@ We can now trigger a dump of the node tree on any screen by using the gesture we
 At this point I want to reiterate to please do not be like me and spend an hour looking for where the logs actually are (I forgot that I have Logcat filters on :woman_facepalming:). They _are_ in Logcat, with the tag `TreeDebug`.
 
 Here's the partial output of the node tree (timestamps remove for verbosity):
+
 {% gist a30af9e8b5b21e89f5ef3df729aa3aeb recyclerview_node_tree_less_verbose.txt %}
 
 The first few lines (lines 2-9) pertain to the status bar stuff, so let's just ignore that. Our application's contents start at line 10 (`type=TYPE_APPLICATION`) with all the views on the screen in the following lines. Each `ViewGroup` is tabbed which is really helpful in figuring out how each node maps to the view hierarchy. There's a lot of information here and some things have changed since Midori's post, so I thought it would be good to review what we can see in the logs. Let's take line 18 for example:
@@ -71,6 +72,7 @@ Content | Notes
 "Collection" information|If things are in a `RecyclerView`
 
 The screen _is_ actually a `RecyclerView`, so let's also take a look at what information we receive:
+
 {% gist d6708fba02585b81f31b8a24040e13af %}
 
 At the end of:
