@@ -42,7 +42,7 @@ The "node tree" being referred to here is basically how Talkback interprets your
 We can now trigger a dump of the node tree on any screen by using the gesture we have set in Talkback.
 
 <center>
-    <a href="https://imgur.com/XUMTJdg"><img src="https://i.imgur.com/XUMTJdg.png" title="Screenshot showing Talkback debugging gesture" width="320"/></a>
+    <a href="https://imgur.com/XUMTJdg"><img src="https://i.imgur.com/XUMTJdg.png" title="Screenshot showing Talkback debugging gesture" width="320"/></a><br />
     <small>Talkback will tell you it has been done</small>
 </center>
 
