@@ -7,7 +7,7 @@ tags:
 
 I have been learning a LOT about Lint the past year. Our team has grown 5x since I joined more than three years ago, and it became really obvious really quickly that we should be letting robots do a lot of the mundane and repetitive enforcement of our team's code conventions.
 
-At some point, we also started fixing up our app's theming and styling to be adhere to our design system. There was also a design shift where new screens being built have a cleaner, sleeker look. Our app is _not small_ (there are 100+ `Activity` declarations in 70+ modules), so redoing all of the screens will understandably take time and a lot of effort.
+At some point, we also started fixing up our app's theming and styling to adhere to our growing design system. There was also a design shift where new screens being built have a cleaner, sleeker look. Our app is _not small_ (there are 100+ `Activity` declarations in 70+ modules), so redoing all of the screens will understandably take time and a lot of effort.
 
 :warning: This is going to be a long and treacherous journey (aka very long post), you have been warned. :warning:
 
@@ -27,7 +27,7 @@ So our problem remains: how do we prevent people from using these deprecated col
 
 ### First stab 🗡️
 
-The answer of course, is to write a Lint rule. [Alex Lockwood](https://twitter.com/alexjlockwood) [open sourced a rule](https://github.com/alexjlockwood/android-lint-checks-demo/blob/master/checks/src/main/java/com/lyft/android/lint/checks/DeprecatedPurpleColorXmlDetector.kt) that flags usages of a specific colour in XML files, and that was a good starting off point for us. Instead of checking just a specific colour like he does, we check against a list of all the colours in the aforementioned `colours_deprecated.xml` file.
+The answer of course, is to write a Lint rule. [Alex Lockwood](https://twitter.com/alexjlockwood) [open sourced a rule](https://github.com/alexjlockwood/android-lint-checks-demo/blob/master/checks/src/main/java/com/lyft/android/lint/checks/DeprecatedPurpleColorXmlDetector.kt) that flags usages of a specific colour in XML files, and that was a good starting off point for us. Instead of checking just a specific colour like Alex does, we check against a list of all the colours in the aforementioned `colours_deprecated.xml` file.
 
 ```kotlin
 val DEPRECATED_COLOURS = listOf("light_gray_background", "red_error", "smoke_gray", "subhead_text_color_dark", ....)
@@ -348,7 +348,7 @@ allColourUsagesLintMap.forEach { key ->
 ```
 Notice above that there is a new (as far as I can tell, only since AGP7) way of reporting issues -- [Incident](https://googlesamples.github.io/android-custom-lint-rules/api-guide.md.html#partialanalysis/incidents). There are other features of `Incident` that we currently don't need so I won't go over them here. For now only the basics would suffice.
 
-The entirety of this `Detector` as well as a project that uses it is available on [Github](https://github.com/zmdominguez/lint-rule-samples/blob/main/lint-checks/src/main/java/dev/zarah/lint/checks/DeprecatedColorInXmlDetector.kt). Our code is only as good as our tests, so in my next post I will talk about writing tests for multi-module setups.
+The entirety of this `Detector` as well as a project that uses it is available on [Github](https://github.com/zmdominguez/lint-rule-samples/blob/main/lint-checks/src/main/java/dev/zarah/lint/checks/DeprecatedColorInXmlDetector.kt). Our code is only as good as our tests, so in my next post I will talk about writing tests for multi-module setups. See you then! :wave:
 
 ---
 
