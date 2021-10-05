@@ -9,7 +9,7 @@ I have been learning a LOT about Lint the past year. Our team has grown 5x since
 
 At some point, we also started fixing up our app's theming and styling to be adhere to our design system. There was also a design shift where new screens being built have a cleaner, sleeker look. Our app is _not small_ (there are 100+ `Activity` declarations in 70+ modules), so redoing all of the screens will understandably take time and a lot of effort.
 
-:warning: This is going to be a long and treacherous journey (aka very long post), you have been warned.
+:warning: This is going to be a long and treacherous journey (aka very long post), you have been warned. :warning:
 
 ### The problem 🤨
 
@@ -348,7 +348,7 @@ allColourUsagesLintMap.forEach { key ->
 ```
 Notice above that there is a new (as far as I can tell, only since AGP7) way of reporting issues -- [Incident](https://googlesamples.github.io/android-custom-lint-rules/api-guide.md.html#partialanalysis/incidents). There are other features of `Incident` that we currently don't need so I won't go over them here. For now only the basics would suffice.
 
-Our code is only as good as our tests, so in my next post I will talk about writing tests for multi-module setups.
+The entirety of this `Detector` as well as a project that uses it is available on [Github](https://github.com/zmdominguez/lint-rule-samples/blob/main/lint-checks/src/main/java/dev/zarah/lint/checks/DeprecatedColorInXmlDetector.kt). Our code is only as good as our tests, so in my next post I will talk about writing tests for multi-module setups.
 
 ---
 
