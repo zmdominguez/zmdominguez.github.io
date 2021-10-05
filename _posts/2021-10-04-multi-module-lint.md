@@ -9,6 +9,8 @@ I have been learning a LOT about Lint the past year. Our team has grown 5x since
 
 At some point, we also started fixing up our app's theming and styling to be adhere to our design system. There was also a design shift where new screens being built have a cleaner, sleeker look. Our app is _not small_ (there are 100+ `Activity` declarations in 70+ modules), so redoing all of the screens will understandably take time and a lot of effort.
 
+:warning: This is going to be a long and treacherous journey (aka very long post), you have been warned.
+
 ### The problem 🤨
 
 Since a new colour palette was introduced by the design team, the first step was to move all of the old, not-to-be-used-anymore colours into a separate file. I named the file `colours_deprecated.xml` and left a comment on top of the file.
@@ -265,12 +267,10 @@ private fun storeFoundColourReference(resourceUrl: ResourceUrl,
 
 Now that we have all the information we need from a module, we need to do the actual persisting so that we can do all the merging for the final analysis.
 
-Going back to the API guide, there is a section called ["Module LintMaps"](
-
-https://googlesamples.github.io/android-custom-lint-rules/api-guide.md.html#partialanalysis/modulelintmaps) and this is somehow related to `checkPartialResults` (I guess)? The docs are not very clear about this, but what that section distills down to is this: intermediate analysis information ("partial results") can be stored in a [`LintMap`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-main:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/LintMap.kt) by calling [`getPartialResults`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-main:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/Context.kt).
+Going back to the API guide, there is a section called ["Module LintMaps"](https://googlesamples.github.io/android-custom-lint-rules/api-guide.md.html#partialanalysis/modulelintmaps) and this is somehow related to `checkPartialResults` (I guess)? The docs are not very clear about this, but what that section distills down to is this: intermediate analysis information ("partial results") can be stored in a [`LintMap`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-main:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/LintMap.kt) by calling [`getPartialResults`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-main:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/Context.kt).
 
 
-For each module that Lint analyses, Lint will call [`afterCheckEachProject`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-main:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/Detector.kt;l=212;drc=d4b31d1f42ea023078516819b35c7b54a79cf71d) which sounds like a good place to persist our partial results.
+For each module that Lint analyses, Lint will call [`afterCheckEachProject`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-main:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/Detector.kt;l=212;drc=d4b31d1f42ea023078516819b35c7b54a79cf71d) which sounds like a good place to persist our partial results. We serialise all the colour names into a string and put in our colour usages `LintMap`:
 ```kotlin
 override fun afterCheckEachProject(context: Context) {
     super.afterCheckEachProject(context)
@@ -289,55 +289,67 @@ In this case, `map()` creates a new `LintMap` that we can use to persist our par
 
 ### Do a final analysis 👩‍🔬
 
-After Lint runs through all the modules, we can do a final analysis of all the partial results that we have saved. There is a callback just for this purpose -- [`checkPartialResults`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-main:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/Detector.kt;l=722;drc=8190da2fc7ac0b3785ed2353baee243bdf7a4012)
+After Lint runs through all the modules, we can do a final analysis of all the partial results that we have saved. There is a callback just for this purpose -- [`checkPartialResults`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-main:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/Detector.kt;l=722;drc=8190da2fc7ac0b3785ed2353baee243bdf7a4012). From my experiments, this seems to be called at the very end of analysis, after all the modules have been processed and at which point all of the per-module results we have persisted before would be available.
 
 ```kotlin
 override fun checkPartialResults(context: Context, partialResults: PartialResult) {
-    // Aggregate all the recorded colour usages and deprecated colours from all the projects
-    val allColourUsagesLintMap = LintMap()
-    val allDeprecatedColours = mutableListOf<String>()
+    
+}
+```
 
-    // Each project (aka module) would have its own PartialResults
-    // Here we retrieve the values we have saved for each project
-    partialResults.forEach { partialResult ->
-        val partialResultValue = partialResult.value
+`PartialResult` make it sound like it's just one thing, but in reality it contains values for each `Issue` for each module (project). We need to merge all of the persisted information we have gathered from all of the modules. I highly encourage reading through the [`PartialResult`](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-main:lint/libs/lint-api/src/main/java/com/android/tools/lint/detector/api/PartialResult.kt;drc=249103b5a19595b02f49fd300779e09da1a80f6f) source code to see what's available (you can, for example, list all the modules that have persisted information by calling `partialResults.projects()`).
+```kotlin
+// Aggregate all the recorded colour usages and deprecated colours from all the projects
+val allColourUsagesLintMap = LintMap()
+val allDeprecatedColours = mutableListOf<String>()
 
-        // Merge all the deprecated colours together into one massive list
-        val colourName = partialResultValue[KEY_COLOUR_NAMES]
-        allDeprecatedColours.addAll(colourName?.split(COLOUR_NAME_DELIMITER).orEmpty())
+// Each project (aka module) would have its own PartialResults
+// Here we retrieve the values we have saved for each project
+partialResults.forEach { partialResult ->
+    val partialResultValue = partialResult.value
 
-        // Merge all colour usages together into one massive LintMap
-        val colourUsages = partialResultValue.getMap(KEY_COLOUR_USAGES)
-        colourUsages?.let { allColourUsagesLintMap.putAll(colourUsages) }
-    }
+    // Merge all the deprecated colours together into one massive list
+    val colourName = partialResultValue[KEY_COLOUR_NAMES]
+    allDeprecatedColours.addAll(colourName?.split(COLOUR_NAME_DELIMITER).orEmpty())
 
-    // There are no deprecated colours, nothing to report
-    if (allDeprecatedColours.isEmpty()) return
+    // Merge all colour usages together into one massive LintMap
+    val colourUsages = partialResultValue.getMap(KEY_COLOUR_USAGES)
+    colourUsages?.let { allColourUsagesLintMap.putAll(colourUsages) }
+}
+```
 
-    // There are no colour usages, nothing to report
-    if (allColourUsagesLintMap.isEmpty()) return
+Now that we have the two aggregated lists, it is a matter of figuring out which of the usages we have found should be flagged. This is where the `Location` we have saved previously would come in handy:
+```kotlin
+// There are no deprecated colours, nothing to report
+if (allDeprecatedColours.isEmpty()) return
 
-    // Check colour usages to see if any are using any of the deprecated colours
-    allColourUsagesLintMap.forEach { key ->
-        val colourName = key.substringBefore(COLOUR_NAME_DELIMITER)
-        if (allDeprecatedColours.contains(colourName)) {
-            var location = allColourUsagesLintMap.getLocation(key)
+// There are no colour usages, nothing to report
+if (allColourUsagesLintMap.isEmpty()) return
 
-            // If for some reason the location is not available (should be impossible really)
-            // Just reference the project
-            if (location == null) {
-                location = Location.create(context.project.dir)
-            }
+// Check colour usages to see if any are using any of the deprecated colours
+allColourUsagesLintMap.forEach { key ->
+    val colourName = key.substringBefore(COLOUR_NAME_DELIMITER)
+    if (allDeprecatedColours.contains(colourName)) {
+        var location = allColourUsagesLintMap.getLocation(key)
 
-            val incident = Incident(context)
-                .issue(ISSUE)
-                .location(location)
-                .message("Deprecated colours should not be used")
-            context.report(incident)
+        // If for some reason the location is not available (should be impossible really)
+        // Just reference the project
+        if (location == null) {
+            location = Location.create(context.project.dir)
         }
+
+        val incident = Incident(context)
+            .issue(ISSUE)
+            .location(location)
+            .message("Deprecated colours should not be used")
+        context.report(incident)
     }
 }
 ```
+Notice above that there is a new (as far as I can tell, only since AGP7) way of reporting issues -- [Incident](https://googlesamples.github.io/android-custom-lint-rules/api-guide.md.html#partialanalysis/incidents). There are other features of `Incident` that we currently don't need so I won't go over them here. For now only the basics would suffice.
+
+Our code is only as good as our tests, so in my next post I will talk about writing tests for multi-module setups.
+
 ---
 
 I previously wrote about [getting started with Lint](https://zarah.dev/2020/11/18/todo-lint.html), [writing your own Detector](https://zarah.dev/2020/11/19/todo-detector.html), and of course [writing tests for Detectors](https://zarah.dev/2020/11/20/todo-test.html). But in July 2021, AGP 7.0 was released and with it comes a [whole bunch of Lint changes](https://developer.android.com/studio/releases/gradle-plugin?hl=lt#lint-behavior-changes). I haven't found a definitive, comprehensive, or official post from Google on what has changed since AGP7 but there seems to be a LOT.
