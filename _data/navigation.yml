@@ -1,0 +1,10 @@
+# Site navigation bar links
+
+- title: Home
+  url: /
+- title: Archives
+  url: /posts/
+- title: Tags
+  url: /tags/
+- title: About
+  url: /about/

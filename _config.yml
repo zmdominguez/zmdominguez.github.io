@@ -1,8 +1,101 @@
-theme: jekyll-theme-cayman
-title: Zarah Dominguez
-description: An Android Love Affair
-google_analytics: UA-18386769-2
-gems:
-  - jekyll-feed
+# Theme settings
+remote_theme: "mmistakes/so-simple-theme@3.2.0"
+skin: "/assets/css/skins/default.css"
+locale: en-AU
+
+# Site setttings
+logo: "/images/zarah_dominguez.jpg"
+title: "Zarah Dominguez"
+description: "An Android Love Affair"
+url: "https://zarah.dev"
+date_format: "%-d %b %Y"
+read_time: true
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
+twitter:
+  username: zarahjutz
+
+# Pagination
+paginate: 10  # amount of posts to show per page
+paginate_path: /page:num/
+
+# Front Matter Defaults
+defaults:
+  # Post defaults
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      share: true
+  - scope:
+      path: "_features"
+      type: features
+    values:
+      layout: post
+      share: true
+  - scope:
+      path: "_speaking"
+      type: speaking
+    values:
+      layout: post
+      share: true
+  - scope:
+      path: "_interviews"
+      type: interviews
+    values:
+      layout: post
+      share: true
+
+# Other pages
+tag_archive_path: "/tags/#"
+
+google_analytics: "UA-18386769-2"
+plugins:
   - jemoji
-  - jekyll-gist
+  - jekyll-feed
+  - jekyll-paginate
+
+# Collections
+collections:
+  features:
+    output: true
+  speaking:
+    output: true
+  interviews:
+    output: true
+
+# Site Author
+author:
+  name: Zarah Dominguez
+  picture: /images/zarah_dominguez.jpg
+  email:
+  twitter: zarahjutz
+  links:
+    - title: Twitter
+      url: https://twitter.com/zarahjutz
+      icon: fab fa-twitter-square
+    - title: GitHub
+      url: https://github.com/zmdominguez
+      icon: fab fa-github-square
+
+# Footer Links
+footer_links:
+  - title: Twitter
+    url: https://twitter.com/zarahjutz
+    icon: fab fa-twitter-square
+  - title: GitHub
+    url: https://github.com/zmdominguez
+    icon: fab fa-github-square
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/zmdominguez/
+    icon: fab fa-linkedin
+  - title: Email
+    url: mailto:hello@zarah.dev
+    icon: fas fa-envelope-square
+  - title: Feed
+    url: feed.xml
+    icon: fas fa-rss-square

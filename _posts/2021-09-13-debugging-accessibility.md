@@ -2,7 +2,8 @@
 layout: post
 title: "Seeing What Talkback Sees 🔍"
 tags:
-    - a11y, accessibility
+    - a11y
+    - accessibility
 ---
 
 One of the things we should be doing as Android developers is to ensure that our apps are as accessible as possible. There are a bunch of talks and articles that discuss the [motivations behind current MDC a11y support](https://youtu.be/nTNwZXVRGdY), the [basic steps](https://youtu.be/bTodlNvQGfY) to [support a11y](https://youtu.be/1by5J7c5Vz4), [testing overviews](https://developer.android.com/guide/topics/ui/accessibility/testing), even [creating your own a11y service](https://developer.android.com/guide/topics/ui/accessibility/service)!

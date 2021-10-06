@@ -2,14 +2,16 @@
 layout: post
 title: "Multi-module Lint Rules 🤹‍♀️"
 tags:
-    - android, lint
+    - android
+    - lint
 ---
 
 I have been learning a LOT about Lint the past year. Our team has grown 5x since I joined more than three years ago, and it became really obvious really quickly that we should be letting robots do a lot of the mundane and repetitive enforcement of our team's code conventions.
 
 At some point, we also started fixing up our app's theming and styling to adhere to our growing design system. There was also a design shift where new screens being built have a cleaner, sleeker look. Our app is _not small_ (there are 100+ `Activity` declarations in 70+ modules), so redoing all of the screens will understandably take time and a lot of effort.
 
-:warning: This is going to be a long and treacherous journey (aka very long post), you have been warned. :warning:
+:warning: This is going to be a long and treacherous journey (aka very long post), you have been warned.
+{: .notice--warning}
 
 ### The problem 🤨
 
