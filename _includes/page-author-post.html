@@ -1,0 +1,9 @@
+{%- assign author = page.author | default: page.authors[0] | default: site.author -%}
+{%- assign author = site.data.authors[author] | default: author -%}
+
+<div class="page-author h-card p-author">
+  <div class="author-info">
+    {% if site.read_time %}{% include read-time.html %}{% endif %}
+    {% if page.date %}{% include page-date.html %}{% endif %}
+  </div>
+</div>

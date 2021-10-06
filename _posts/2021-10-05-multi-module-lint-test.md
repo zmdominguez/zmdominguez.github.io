@@ -2,7 +2,8 @@
 layout: post
 title: "Multi-module Lint Rules: Tests 🧪"
 tags:
-    - android, lint
+    - android
+    - lint
 ---
 
 In my [previous post](https://zarah.dev/2021/10/04/multi-module-lint.html), I talked about how to write a Lint rule that gathers information from different modules before performing a final analysis to determine if there are errors.
