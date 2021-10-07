@@ -15,7 +15,7 @@ New York, USA
 
 
 ### Video
-{% include responsive-embed url="https://youtu.be/gjHY7jl4rrA" %}
+{% include responsive-embed url="https://www.youtube.com/embed/gjHY7jl4rrA" %}
 
 
 ## Slides
