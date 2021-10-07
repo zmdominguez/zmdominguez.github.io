@@ -9,39 +9,30 @@ sort_order: reverse
 ---
 Android Developer. Sydney by way of Manila. Google Developer Expert. Baking noob.
 
+{% include about-section.html collection="speaking" blurb="I give talks about development in general and about Android in particular." %}
 
-# Speaking
+{% include about-section.html collection="features" blurb="Some videos and/or featurettes that include me." %}
 
-I give talks about development in general and about Android in particular.
-
-<div class="entries-{{ page.entries_layout | default: 'list' }}">
-  {% include documents-collection.html collection="speaking" sort_by=page.sort_by sort_order=page.sort_order %}
-</div>
+{% include about-section.html collection="interviews" blurb="From time to time, I have a chat with other people and it ends up on the internet." %}
 
 
-# Features
+{% assign tag_name = "organising" %}
+<section id="{{ tag_name | slugify | downcase }}" class="taxonomy-section">
+  <h2 class="taxonomy-title">{{ tag_name }}</h2>
 
-Some videos and/or featurettes that include me.
-
-<div class="entries-{{ page.entries_layout | default: 'list' }}">
-  {% include documents-collection.html collection="features" sort_by=page.sort_by sort_order=page.sort_order %}
-</div>
-
-
-# Interviews
-
-From time to time, I have a chat with other people and it ends up on the internet.  
-
-<div class="entries-{{ page.entries_layout | default: 'list' }}">
-  {% include documents-collection.html collection="interviews" sort_by=page.sort_by sort_order=page.sort_order %}
-</div>
+    <p>I also organise a number of events mainly in Sydney, Australia. Some of the major conferences I helped organise are:</p>
+   
+  {% capture organising %}
+  [DevFest Sydney 2019](http://devfest.org.au/)  
+  [DevFest Sydney 2018](http://2018.devfest.org.au/)  
+  [DevFest Sydney 2017](http://2017.devfest.org.au/)  
+  [DevFest Sydney 2016](http://2016.devfest.org.au/)  
+  [DevFest Sydney 2015](http://2015.devfest.org.au/)  
+  {% endcapture %}
+  {{ organising | markdownify }}
 
 
-## Organising
+    <a href="#page-title" class="back-to-top">{{ site.data.text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+</section>
 
- I also organise a number of events mainly in Sydney, Australia. Some of the major conferences I helped organise are:  
-[DevFest Sydney 2019](http://devfest.org.au/)  
-[DevFest Sydney 2018](http://2018.devfest.org.au/)  
-[DevFest Sydney 2017](http://2017.devfest.org.au/)  
-[DevFest Sydney 2016](http://2016.devfest.org.au/)  
-[DevFest Sydney 2015](http://2015.devfest.org.au/)  
+   

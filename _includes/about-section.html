@@ -1,0 +1,13 @@
+{% assign tag_name = include.collection %}
+
+<section id="{{ tag_name | slugify | downcase }}" class="taxonomy-section">
+  <h2 class="taxonomy-title">{{ tag_name }}</h2>
+
+    {{ include.blurb | markdownify}}
+
+    <div class="entries-{{ page.entries_layout | default: 'list' }}">
+      {% include documents-collection.html collection=tag_name sort_by=page.sort_by sort_order=page.sort_order %}
+    </div>
+
+    <a href="#page-title" class="back-to-top">{{ site.data.text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+</section>
