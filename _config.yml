@@ -37,18 +37,21 @@ defaults:
     values:
       layout: post
       share: true
+      default_placeholder: true
   - scope:
       path: "_speaking"
       type: speaking
     values:
       layout: post
       share: true
+      default_placeholder: true
   - scope:
       path: "_interviews"
       type: interviews
     values:
       layout: post
       share: true
+      default_placeholder: true
 
 # Other pages
 tag_archive_path: "/tags/#"
