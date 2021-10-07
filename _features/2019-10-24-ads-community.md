@@ -5,6 +5,6 @@ In this teaser video for [Android Dev Summit 2019](https://developer.android.com
 
 ## Video
 
-{% include responsive-embed url="https://youtu.be/Hsu5f_Ie3sc" %}
+{% include responsive-embed url="https://www.youtube.com/embed/Hsu5f_Ie3sc" %}
 
 

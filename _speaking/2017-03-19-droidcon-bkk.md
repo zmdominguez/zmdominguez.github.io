@@ -10,7 +10,7 @@ Bangkok, Thailand
 
 
 ### Video
-{% include responsive-embed url="https://youtu.be/d3nXi7R9UuI" %}
+{% include responsive-embed url="https://www.youtube.com/embed/d3nXi7R9UuI" %}
 
 
 ## Slides
