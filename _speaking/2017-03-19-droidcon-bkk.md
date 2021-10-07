@@ -1,5 +1,8 @@
 ---
 title: "Tools of the Trade"
+image:
+  path: https://i.imgur.com/0d7HkHc.jpg
+  thumbnail: https://i.imgur.com/0d7HkHcm.jpg
 ---
 A talk about the various tools available to us as developers that make our day-to-day life easier.
 

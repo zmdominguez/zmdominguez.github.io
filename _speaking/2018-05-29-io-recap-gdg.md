@@ -1,5 +1,8 @@
 ---
 title: "Google I/O 2018 Recap"
+image:
+  path: https://i.imgur.com/uFz8AVB.jpg
+  thumbnail: https://i.imgur.com/uFz8AVBm.jpg
 ---
 
 A recap of the major topics and announcements from Google I/O 2018.

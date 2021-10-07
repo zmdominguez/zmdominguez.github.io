@@ -1,5 +1,8 @@
 ---
 title: "@{app.plaid}"
+image:
+  path: https://i.imgur.com/SQm6puJ.jpg
+  thumbnail: https://i.imgur.com/SQm6puJm.jpg
 ---
 Data binding is a very powerful tool that helps abstract away a lot of boilerplate code. Aside from doing away with findViewByIds, it makes mapping data models to our UI quick and painless. In this talk, we will explore how to use the data binding library through a lot of code samples using the open-source app Plaid. We will touch on some intermediate features such as making custom BindingAdapters to adapt existing widgets to our own needs.
 
