@@ -20,7 +20,7 @@ Android has its own dedicated issue tracker  organised into several components. 
 
 It is important to select the correct component because (1) it makes the relevant team aware of your issue, and (2) each component may have a template for reporting issues.
  
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/bug_reports/components_filter.png"><img src="{{ site.baseurl }}/assets/bug_reports/components_filter.png" width="478" height="315"></a><br />
+<p style="text-align: center"><a href="https://imgur.com/irzmcNQ"><img src="https://i.imgur.com/irzmcNQ.png" title="Component filter" width="478" height="315" /></a><br />
 <small>Android Studio component with template</small></p>
 
 When writing up a bug report, think of what you, as a developer, would find useful if it were _you_ receiving the issue. _"This app sucks"_ is way less helpful than _"I have trouble logging in with my credentials that work on my computer"_.
@@ -43,7 +43,8 @@ Sometimes, [my feature requests](https://issuetracker.google.com/issues/37136823
 The trick is to make the bug report as great as possible. Let's take [this bug for example](https://issuetracker.google.com/issues/38213600). I encountered an issue whilst running "Remove Unused Resources" from Android Studio and wanted to report it.
 
 To gather the relevant information about my machine, I opened Android Studio and then chose "About Android Studio". I then clicked on the copy icon in the dialogue box that appeared; that copies into my clipboard almost all the information asked for by the template!
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/bug_reports/copy_info.png"><img src="{{ site.baseurl }}/assets/bug_reports/copy_info.png" width="468" height="228"></a><br />
+<p style="text-align: center">
+	<a href="https://imgur.com/7gbMwsb"><img src="https://i.imgur.com/7gbMwsb.png" title="source: imgur.com" width="468" height="228" /></a><br />
 <small>Click that!</small></p>
 
 I then provided a short overview of the reproduction steps; I try to follow the given-when-then pattern. Set the scene first to give the developers some context of what we are trying to achieve. In this case, I have provided a zip file of sample project that reproduces the error.

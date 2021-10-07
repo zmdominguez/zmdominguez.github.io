@@ -13,7 +13,7 @@ I have been referencing the [MDC Catalog](https://github.com/material-components
 
 We have two kinds of Toolbars in our app -- the first one with our standard primary colour, and a "clean" variant.
 
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/tintables/toolbar_types.jpg"><img src="{{ site.baseurl }}/assets/tintables/toolbar_types.jpg"></a></p>
+<p style="text-align: center"><a href="https://imgur.com/dZsOBVY"><img src="https://i.imgur.com/dZsOBVY.jpg" title="Toolbar types" /></a></p>
 
 When we initially set up our theming, we made this theme overlay (read [about theme overlays here](https://medium.com/androiddevelopers/theming-with-appcompat-1a292b754b35)) to style our toolbar and give it that green arrow:
 ```xml
@@ -75,7 +75,7 @@ And applying this to our Toolbar (remember it is now a **_style_** !):
 ```
 
 And this works really well, until....
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/tintables/no_x.png"><img src="{{ site.baseurl }}/assets/tintables/no_x.png"></a><br /><small>The close button is now invisible :scream:</small></p>
+<p style="text-align: center"><a href="https://imgur.com/eOkn84a"><img src="https://i.imgur.com/eOkn84a.png" title="Missing X" /></a><br /><small>The close button is now invisible :scream:</small></p>
 
 The only difference between this screen and the others is that we provide a vector drawable for the navigation icon:
 ```xml

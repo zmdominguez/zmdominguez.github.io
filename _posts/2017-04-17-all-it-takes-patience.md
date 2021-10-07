@@ -27,7 +27,10 @@ I spent a whole bunch of time writing code for this talk. And by whole bunch I m
 
 I started up a Google Slides draft right as I started working on the code. That helped me come up with an outline organically. At this point, the slides all consist of short titles that would probably make sense only to me, and links to PRs that I create against my repo. If there is a particularly interesting thing I run across, I note it in the slide too.
 
-<p style="text-align: center"><a href="Slide Draft"><img src="{{ site.baseurl }}/assets/slides_draft.png" height="360" ></a></p>
+<p style="text-align: center">
+	<a href="https://imgur.com/VwHAYk7"><img src="https://i.imgur.com/VwHAYk7.png" height="360" /></a><br />
+	<small>Slide draft</small>
+</p>
 
 And then of course, there's the inevitable three days I spent looking for a suitable presentation theme. I use [Slide Carnival](http://www.slidescarnival.com/), and it took a lot of false starts before I finally settled on [Viola](http://www.slidescarnival.com/viola-free-presentation-template/414). 
 

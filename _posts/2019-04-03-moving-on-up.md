@@ -21,15 +21,15 @@ There are two main movement actions, _move statement_ and _move line_. Depending
 Moving a _statement_ means that the IDE will respect the context within which that particular element exists. In the case of a single line of code, this means maintaining its current scope. What this means exactly is -- if a line is inside a function, using CMD+SHIFT+UP/DOWN will *never* move it out of the function.
 
 To wit:
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/moving_up/cmd_shift_line.gif"><img src="{{ site.baseurl }}/assets/moving_up/cmd_shift_line.gif"></a><br /></p>
+<p style="text-align: center"><a href="https://imgur.com/OKSXyVk"><img src="https://i.imgur.com/OKSXyVk.gif" title="source: imgur.com" /></a></a><br /></p>
 
 But this line wants to move to another function! It says so itself! This is when CMD+ALT+UP/DOWN comes in handy:
 
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/moving_up/cmd_alt_line_2.gif"><img src="{{ site.baseurl }}/assets/moving_up/cmd_alt_line_2.gif"></a><br /></p>
+<p style="text-align: center"><a href="https://imgur.com/YtsT7iS"><img src="https://i.imgur.com/YtsT7iS.gif" title="source: imgur.com" /></a><br /></p>
 
 This shortcut is really handy when reordering or refactoring functions:
 
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/moving_up/cmd_shift_fun.gif"><img src="{{ site.baseurl }}/assets/moving_up/cmd_shift_fun.gif"></a><br /></p>
+<p style="text-align: center"><a href="https://imgur.com/jKR7Kzu"><img src="https://i.imgur.com/jKR7Kzu.gif" title="source: imgur.com" /></a><br /></p>
 
 I leave it as an exercise for the reader to see how the shortcut behaves with classes. Get moving and stop copy-pasting! :dancers:
 

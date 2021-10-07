@@ -9,7 +9,9 @@ Last week, I was giving feedback to someone about improving the commit messages 
 Their argument was that change descriptions go into the pull request anyway, so they -- not just him, his **_whole team_** -- do not really care if the commit messages are vague.
 
 I whole-heartedly disagree with this assessment. To illustrate my point, say we are looking for a commit that broke a feature.  What I usually do in this situation is to look at the whole commit history to look for anything obvious. It is not very easy when the history looks like this: 
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/2017_info.png"><img src="{{ site.baseurl }}/assets/git_commits.png"></a></p>
+<p style="text-align: center">
+	<a href="https://imgur.com/9nXYFor"><img src="https://i.imgur.com/9nXYFor.png" /></a>
+</p>
 
 😩😩😩😩 We can either go through each of the changed files in each of these commits. This might be too tedious, and the commit messages does not give us any clear idea if that might be the case.
 

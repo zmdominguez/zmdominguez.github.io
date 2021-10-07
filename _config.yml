@@ -4,7 +4,7 @@ skin: "/assets/css/skins/default.css"
 locale: en-AU
 
 # Site setttings
-logo: "/images/zarah_dominguez.jpg"
+logo: "/assets/images/zarah_dominguez.jpg"
 title: "Zarah Dominguez"
 description: "An Android Love Affair"
 url: "https://zarah.dev"

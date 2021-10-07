@@ -15,12 +15,13 @@ Massive thanks to [Michael Evans](https://twitter.com/m_evans10) for helping me 
 
 This function is meant to be used within a dev or debug drawer. It aims to provide a quick way to reset individual `SharedPreference` files to their default values. It scans your app's `shared_prefs` folder and lists the available files. You can then tick the box for those files you want reset.  
 
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/reset_prefs/alert_choose_file.png"><img src="{{ site.baseurl }}/assets/reset_prefs/alert_choose_file.png" width="320"></a><br />
+<p style="text-align: center">
+	<a href="https://imgur.com/Bm8wl2X"><img src="https://i.imgur.com/Bm8wl2X.png"  width="320" /></a><br />
 <small>Human-readable and neat 👌</small></p>  
 
 Aside from the default file generated via [`PreferenceManager.getDefaultSharedPreferences()`](https://developer.android.com/reference/android/preference/PreferenceManager.html#getDefaultSharedPreferences(android.content.Context)), the system does not really enforce a naming convention. They _do_ recommend [prefixing files with the application ID](https://developer.android.com/training/data-storage/shared-preferences#GetSharedPreferences) though!  
 
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/reset_prefs/device_explorer.png"><img src="{{ site.baseurl }}/assets/reset_prefs/device_explorer.png"></a><br />
+<p style="text-align: center"><a href="https://imgur.com/e9xiqto"><img src="https://i.imgur.com/e9xiqto.png" /></a><br />
 <small>Naming is hard</small></p>  
 
 This function assumes that the `SharedPreferences` files your app owns follow this naming convention: `MY.APPLICATION.ID_my_preference_file`. Of course, there's nothing stopping you from tweaking the current implementation to adapt to your needs!  

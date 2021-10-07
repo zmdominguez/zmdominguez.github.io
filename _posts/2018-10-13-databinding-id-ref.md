@@ -8,7 +8,8 @@ tags:
 Last week, I was talking to someone on my team and it became apparent that they weren't aware of one super useful feature of data binding. If you know me at all, you know that I ~~like~~ love this library, and I would take every opportunity to spread the love around.
 
 Let's take a very simple example -- say we have a `CheckBox` and a `TextView` in a layout file, and we want the `TextView` to display if the `CheckBox` is checked or not. I made this adorable gif to illustrate:
-<p style="text-align: center"><a href="Cheeky!"><img src="{{ site.baseurl }}/assets/databinding_id_ref/cheeky_checkbox.gif" ></a><br />
+<p style="text-align: center"><a href="Cheeky!">
+    <a href="https://imgur.com/xWn7lh2"><img src="https://i.imgur.com/xWn7lh2.gif" title="source: imgur.com" /></a><br />
 <small>Cheeky!</small></p>  
 
 The corresponding layout file is pretty straightforward:

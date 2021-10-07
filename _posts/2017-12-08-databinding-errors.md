@@ -13,7 +13,9 @@ I have talked a lot about data binding, and the past couple of times that I did,
 
 <center><h3>1</h3></center>
 
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/databinding_errors/user_defined_types.png"><img src="{{ site.baseurl }}/assets/databinding_errors/user_defined_types.png" ></a></p>
+<p style="text-align: center">
+   <a href="https://imgur.com/TUmohNn"><img src="https://i.imgur.com/TUmohNn.png" /></a>
+</p>
 
 This error means the layout file is using a variable ("`user defined types`") called `library`, but it is has not been declared within the `data` element.
 
@@ -34,7 +36,9 @@ It turns out that I have reported this in the [issue tracker](https://issuetrack
 
 <center><h3>2</h3></center>
 
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/databinding_errors/namespace_ignore.png"><img src="{{ site.baseurl }}/assets/databinding_errors/namespace_ignore.png" ></a></p>
+<p style="text-align: center">
+   <a href="https://imgur.com/x7y3wPZ"><img src="https://i.imgur.com/x7y3wPZ.png" /></a>
+</p>
 
 If I remember correctly, during the early days of data binding, the `BindingAdapter` implementations would have the namespace included in the annotations. It did seem to ignore it, and at some point in the past year, this warning popped up.
 
@@ -49,7 +53,9 @@ public static void setAvatar(ImageView imageView, String url, boolean isCircleCr
 
 <center><h3>3</h3></center>
 
-<p style="text-align: center"><a href="{{ site.baseurl }}/assets/databinding_errors/observable_fields.png"><img src="{{ site.baseurl }}/assets/databinding_errors/observable_fields.png" ></a></p>
+<p style="text-align: center">
+   <a href="https://imgur.com/qO8PXII"><img src="https://i.imgur.com/qO8PXII.png" /></a>
+</p>
 
 `Observable` fields may be one of my most favourite things in data binding. If you are not familiar, I highly suggest [reading up on them](https://developer.android.com/topic/libraries/data-binding/index.html#observablefields) and trying them out.
 
