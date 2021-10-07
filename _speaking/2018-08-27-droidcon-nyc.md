@@ -1,5 +1,8 @@
 ---
 title: "Don't Sweat the Small Stuff"
+image:
+  path: https://i.imgur.com/HI9pAWl.jpg
+  thumbnail: https://i.imgur.com/HI9pAWlm.jpg
 ---
 
 Or, how to find joy in development through small things.
