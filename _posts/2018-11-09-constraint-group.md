@@ -8,7 +8,8 @@ tags:
 ---
 One bit of task that I find myself doing over and over again is managing a bunch of `View`s and their visibility. In the olden days *&lt;insert old person handwave&gt;*, before there was `ConstraintLayout`, I have written my fair share of `container_`s to make this task manageable. Say we have to do something like this:
 
-<p style="text-align: center"><a href="Now you see me, now you don't"><img src="{{ site.baseurl }}/assets/constraint_group/constraint_group.gif" width="320"></a><br />
+<p style="text-align: center">
+    <a href="https://imgur.com/aMHWlb2"><img src="https://i.imgur.com/aMHWlb2.gif"  width="320" /></a><br />
 <small>Now you see me, now you don't!</small></p>  
 
 If you asked me two years ago to implement the layout above, I would have:
