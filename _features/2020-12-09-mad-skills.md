@@ -9,6 +9,6 @@ This video is part of the Modern Android Development (MAD) Skills series on Mate
 
 ## Video
 
-{% include responsive-embed url="https://youtu.be/qd_qN-QHRas" %}
+{% include responsive-embed url="https://www.youtube.com/embed/qd_qN-QHRas" %}
 
 
