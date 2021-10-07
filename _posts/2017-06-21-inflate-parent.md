@@ -32,7 +32,9 @@ RowRelatedPropertyBinding.inflate(LayoutInflater.from(context), container, false
 
 One thing I always forget is that any `layout_*` attribute is an instruction to the **parent**. Whenever I am reminded of this, I always go "Ah yes _of course_ I knew _that_".
 
-<p style="text-align: center"><a href="inflate params"><img src="{{ site.baseurl }}/assets/inflate_layout_params.png" height="360" ></a></p>
+<p style="text-align: center">
+        <a href="https://imgur.com/AZpmBCR"><img src="https://i.imgur.com/AZpmBCR.png" height="360" /></a>
+</p>
 
 The code that generated the screenshot above is in my [Sandbox repo](https://github.com/zmdominguez/sdk_sandbox/pull/9/commits/b2d248fc81e56fa9bb81c0f19203698f3b0360ca).
 

@@ -106,7 +106,10 @@ public abstract class TopekaRoom extends RoomDatabase {
 `Room` will generate the implementation of this DAO for us at compile time.
 
 Now that we have set everything up, it should just work right? Not quite. Running the app spits out a bunch of errors.
-<p style="text-align: center"><a href="Room needs help"><img src="{{ site.baseurl }}/assets/cannot_figure_out_convert.png" ></a></p>
+<p style="text-align: center">
+    <a href="https://imgur.com/zt2buxh"><img src="https://i.imgur.com/zt2buxh.png" /></a><br />
+    <small>Room needs help</small>
+</p>
 
 Double-clicking the error brings us to the problematic field. `Room` cannot figure out how we want `List<Quizzes>` to be stored. We really don't want it in this table anyway, so we can safely tell `Room` to ignore it:
 ```java
@@ -115,7 +118,10 @@ private List<Quiz> mQuizzes;
 ```
 
 The next error we have to deal with is that our `Category` model has a bunch of constructors present and `Room` cannot figure out which one we want to use.
-<p style="text-align: center"><a href="Room needs more help"><img src="{{ site.baseurl }}/assets/cannot_figure_constructor.png" ></a></p>
+<p style="text-align: center">
+    <a href="https://imgur.com/G8NsE35"><img src="https://i.imgur.com/G8NsE35.png" /></a><br />
+    <small>Room needs more help</small>
+</p>
 We can fix this by making the fields we want in our entity to be public, or by making the required setters for our fields (which have been declared final), or by making a suitable constructor that `Room` can use. A "suitable constructor" means both types and names match the fields of our `Entity`.
 
 ```java
@@ -185,7 +191,10 @@ try {
 ```
 
 Running our app now shows both of our databases:
-<p style="text-align: center"><a href="We built a Room"><img src="{{ site.baseurl }}/assets/topeka_dbs.png" ></a></p>
+<p style="text-align: center">
+    <a href="https://imgur.com/4LJ4di1"><img src="https://i.imgur.com/4LJ4di1.png" /></a><br />
+    <small>We built a Room</small>
+</p>
 
 Success!
 
