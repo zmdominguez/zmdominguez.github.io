@@ -13,14 +13,16 @@ During one of my practice runs, I keep a notepad beside me and jot down a few ke
 
 Once I hit those slides I have written down, I put that down as a lap and jot the time down across the slide number. I keep on going until I finish the whole talk.
 
-<p style="text-align: center"><a href="Time Check"><img src="{{ site.baseurl }}/assets/time_check/time_notes.jpg" height="320" ></a><br />
+<p style="text-align: center">
+	<a href="https://imgur.com/4uJcfY8"><img src="https://i.imgur.com/4uJcfY8.jpg" height="320" /></a><br />
 <small>Keeping time (and please pardon my handwriting)</small></p>  
 
 I try to do this at least twice -- the more data points the better! I found out that my lap times tend to diverge +/- a minute or so on each iteration. Once I am happy with the general timing, it's time to make the times official!  
 
 I then add the times to my speaker notes, making sure I use a BIG FONT so that it's easy to read.
 
-<p style="text-align: center"><a href="Time Check"><img src="{{ site.baseurl }}/assets/time_check/time_check.png" height="360" ></a><br />
+<p style="text-align: center">
+	<a href="https://imgur.com/Qu8KKOs"><img src="https://i.imgur.com/Qu8KKOs.png" height="360" /></a><br />
 <small>Time for a time check!</small></p>
 
 I find that having those time checks in there help make sure that I pace myself well during the actual talk. I tend to speak fast when I am nervous, so knowing that I am going at the right speed helps calm me down a bit.  
