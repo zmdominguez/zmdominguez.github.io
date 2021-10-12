@@ -1,7 +1,7 @@
 ---
 title: "Hello! 👋"
-layout: about
-permalink: /about/
+layout: talks
+permalink: /talks/
 collection: speaking
 entries_layout: grid
 sort_by: date
@@ -9,11 +9,11 @@ sort_order: reverse
 ---
 Android Developer. Sydney by way of Manila. Google Developer Expert. Baking noob.
 
-{% include about-section.html collection="speaking" blurb="I give talks about development in general and about Android in particular." %}
+{% include talks-section.html collection="speaking" blurb="I give talks about development in general and about Android in particular." %}
 
-{% include about-section.html collection="features" blurb="Some videos and/or featurettes that include me." %}
+{% include talks-section.html collection="features" blurb="Some videos and/or featurettes that include me." %}
 
-{% include about-section.html collection="interviews" blurb="From time to time, I have a chat with other people and it ends up on the internet." %}
+{% include talks-section.html collection="interviews" blurb="From time to time, I have a chat with other people and it ends up on the internet." %}
 
 
 {% assign tag_name = "organising" %}
