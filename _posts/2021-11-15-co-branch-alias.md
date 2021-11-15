@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lazy dev: Switching branches 🌳"
+title: "Lazy dev: Indexed Branch Switching 🌳"
 tags:
     - git
 ---
