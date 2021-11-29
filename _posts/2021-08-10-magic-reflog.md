@@ -31,7 +31,7 @@ From here I can use the branch name and go back to that branch if I want to. Sca
 
 After some furious Googling and some trial and error, I ended up with this:
 ```zsh
-git reflog | egrep -io "moving from ([^[:space:]]+)" | awk '{ print NR " - " $3 }' | head -n 5'
+git reflog | egrep -io "moving from ([^[:space:]]+)" | awk '{ print NR " - " $3 }' | head -n 5
 ```
 
 Let's break it down:
