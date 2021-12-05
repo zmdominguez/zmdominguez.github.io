@@ -8,12 +8,12 @@ tags:
 About a year ago, I wrote [about including quickfixes for Lint rules](https://zarah.dev/2020/11/19/todo-detector.html).  Quick fixes appear on the context menu when Lint flags an error and allows developers to quickly address the issue. They can be applied by clicking on the link at the bottom of the dialog or pressing ALT+ENTER (⌥ + ↩) and then choosing the fix.
 
 <center>
-    <a href="https://imgur.com/KCknsbR"><img src="https://i.imgur.com/KCknsbR.png" title="source: imgur.com" /></a>
+    <a href="https://imgur.com/KCknsbR"><img src="https://i.imgur.com/KCknsbR.png" title="source: imgur.com" width="450"/></a>
     <small>Hovering over the error brings up a dialog with the quickfix option available</small>
 </center>
 
 <center>
-    <a href="https://imgur.com/ykg8LiM"><img src="https://i.imgur.com/ykg8LiM.png" title="source: imgur.com" /></a>
+    <a href="https://imgur.com/ykg8LiM"><img src="https://i.imgur.com/ykg8LiM.png" title="source: imgur.com" width="450"/></a>
     <small>Pressing ALT+ENTER on the error brings up a menu with available options</small>
 </center>
 
