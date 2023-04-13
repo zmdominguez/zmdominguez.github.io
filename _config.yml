@@ -96,6 +96,9 @@ footer_links:
   - title: LinkedIn
     url: https://www.linkedin.com/in/zmdominguez/
     icon: fab fa-linkedin
+  - title: Mastodon
+    url: https://androiddev.social/@zarah
+    icon: fab fa-mastodon
   - title: Email
     url: mailto:hello@zarah.dev
     icon: fas fa-envelope-square
