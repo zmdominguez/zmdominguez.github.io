@@ -161,8 +161,3 @@ adb -s $serial_number wait-for-device && adb -s $serial_number reverse tcp:9000 
 I am 💩 at shell scripting (as evidenced by how much time I spent writing this tiny script), but I imagine it may be possible to make this work without having to have one version of the script for each `adb` command. Maybe a lookup map with the command name as the key and the `adb` command for a single device and the `adb` command for multiple devices as the values? Is that even possible? Maybe? It'd be nice.
 
 But for now, the script is [available on Github](https://gist.github.com/zmdominguez/1b74a2fa6bb027870362a3ca5202a8df).
-
-
-
-**Note**: In most circumstances, we would need to pass around minimal information such as an `ID`. However, there may be instances where we have to deal with more complex structures -- for example, when a user is applying filters to a list. For the purposes of this post, we will deal with multiple properties of a `data class`.  
-{: .notice}
