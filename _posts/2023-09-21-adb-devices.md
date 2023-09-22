@@ -111,7 +111,7 @@ function getSerialNumber() {
 }
 ```
 
-To make it even easier, we can make a convenience function to call through to `getSerialNumber` and then launch the `adb` command (thanks to my teammate Ani for suggesting this!):
+To make it even easier, we can make a convenience function to call through to `getSerialNumber` and then launch the `adb` command (thanks to my teammate [Ani](https://www.linkedin.com/in/aniruddhfichadia/) for suggesting this!):
 ```shell
 # Sends an interactive ADB command
 # Usage: Use the usual ADB command, replacing `adb` with `adbi`
