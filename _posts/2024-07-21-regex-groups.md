@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I Dub Thee... Marginally better at RegE`x"
+title: "I Dub Thee... Marginally better at RegEx"
 tags:
     - kotlin
     - regex
