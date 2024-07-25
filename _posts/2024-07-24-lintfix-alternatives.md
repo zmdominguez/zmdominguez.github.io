@@ -146,3 +146,6 @@ we included in the fix:
 What this means is that any matches to the `@RegExp` we pass into `select()` must
 be enclosed between `[` and `]`. I assumed the pipe (`|`) is meant to indicate
 where the caret is? Maybe? 🤔
+
+We'll leave this here for now, unless inspiration hits me and we can spiffify this 
+rule even more. 👋
