@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lint Revisit: Providing Alternatives 🔀"
+title: "Lint Revisit: Providing Alternatives 🧙‍♀️"
 tags:
     - android
     - lint
@@ -17,7 +17,10 @@ we want to restrict these issues to a set of pre-defined project-specific
 prefixes? What if we want to surface those prefixes in the auto-fix options? 
 Something like this maybe?
 
+<figure class="align-center">
 <a href="https://imgur.com/VTc8m4F"><img src="https://i.imgur.com/VTc8m4F.gif" /></a> 
+<figcaption>A Lint rule with alternative fixes</figcaption>
+</figure>
 
 Super cool right?
 
@@ -54,14 +57,20 @@ We can still use the same checks as we do for the date:
 When we report the issue, we can then include the valid prefixes in the issue
 explanation to help users figure out what went wrong:
 
+<figure class="align-center">
 <a href="https://imgur.com/I9y0Vyy"><img src="https://i.imgur.com/I9y0Vyy.png" width="500" /></a>
+<figcaption>Issue explanation</figcaption>
+</figure>
 
 ### Offering more help 🛟
 
 However, to make our rule even more helpful, we can include available options in 
 our `LintFix`:
 
+<figure class="align-center">
 <a href="https://imgur.com/jF2CIQU"><img src="https://i.imgur.com/jF2CIQU.png" width="400" /></a>
+<figcaption>Alternatives as intentions</figcaption>
+</figure>
 
 This is done by adding [`alternatives()`](https://googlesamples.github.io/android-custom-lint-rules/api-guide.md.html#addingquickfixes/combiningfixes) 
 to our `LintFix`:
