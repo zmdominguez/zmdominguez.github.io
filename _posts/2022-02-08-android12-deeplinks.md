@@ -2,6 +2,7 @@
 layout: post
 title: "Debugging App Links in Android 12 🔗"
 tags:
+    - android
     - deeplinks
 ---
 I have been working with deeplinks lately and I noticed that quite a few things have changed since I last worked with them. The most important change is quoted in the list of [Android 12 behaviour changes](https://developer.android.com/about/versions/12/behavior-changes-all#web-intent-resolution):
@@ -16,20 +17,20 @@ There's enough documentation on the Android developer site on how to go about ha
 - [Associate your website with your app](https://developer.android.com/training/app-links/verify-site-associations#web-assoc)
 
 If all goes well, clicking on a link should open the corresponding screen in the app:
-<center>
+<figure class="align-center">
     <a href="https://imgur.com/4Kn6N5T"><img src="https://imgur.com/4Kn6N5T.gif" width="320"/></a><br />
-    <small>Deep linking into the product details screen</small>
-</center>
+    <figcaption>Deep linking into the product details screen</figcaption>
+</figure>
 
 If things do *not* go well, Google has provided ways to [test deeplinks](https://developer.android.com/training/app-links/verify-site-associations#testing). There are lots of ways to figure out where things went wrong, but they are scattered in different sections. For my sanity, I have collated the steps I have found so that they are all in one place.
 
 ### Website Linking
 If your website is not verified to work with the app, auto-verification will fail. Head on over to the [Statement List Generator and Tester](https://developers.google.com/digital-asset-links/tools/generator), put in the required details, and click on "Test statement".
 
-<center>
+<figure class="align-center">
     <a href="https://imgur.com/T9J8qI8"><img src="https://i.imgur.com/T9J8qI8.png" title="source: imgur.com" width="450" /></a><br />
-    <small>Successful linking!</small>
-</center>
+    <figcaption>Successful linking!</figcaption>
+</figure>
 
 
 You can also use the Digital Assets API to confirm that the `assetlinks.json` file is properly hosted:
@@ -127,10 +128,10 @@ woolworths.test-app.link: legacy_failure
 ```
 
 I can go into the app's settings and manually approve these URLs:
-<center>
+<figure class="align-center">
     <a href="https://i.imgur.com/OYEKHYO"><img src="https://i.imgur.com/OYEKHYO.png" title="Screenshot showing links" width="320"/></a><br />
-    <small>Manual permission for supported links</small>
-</center>
+    <figcaption>Manual permission for supported links</figcaption>
+</figure>
 
 
 ### Resetting Verification
